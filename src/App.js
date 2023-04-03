@@ -1,10 +1,10 @@
 import "./App.css";
+import Food from "./components/Food/food";
 
 function App() {
   return (
     <div className="App">
-      <h3>Recommend to Becky</h3>
-      <h4>Food</h4>
+      <Food />
     </div>
   );
 }
