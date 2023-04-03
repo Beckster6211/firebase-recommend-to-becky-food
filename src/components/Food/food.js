@@ -7,18 +7,14 @@ function Food() {
   const [food, setNewFood] = useState([]);
 
   useEffect(() => {
-    console.log(food);
     const q = query(collection(db, "Food"));
-    console.log(q);
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
-      console.log(unsubscribe);
       let foodArray = [];
       querySnapshot.forEach((doc) => {
         foodArray.push({ ...doc.data(), id: doc.id });
       });
-      console.log(foodArray);
       setNewFood(foodArray);
-      console.log(food);
+      //console.log(food);
     });
     return () => unsubscribe();
   }, []);

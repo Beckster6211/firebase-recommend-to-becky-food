@@ -2,7 +2,7 @@ import React from "react";
 import Item from "../Item/item";
 
 function FoodTable({ food }) {
-  console.log(food);
+  // console.log(food);
   return (
     <div className="foodTable">
       <p>Food Table</p>
@@ -21,7 +21,7 @@ function FoodTable({ food }) {
             <th>Food</th>
             <th>Where/Recipe?</th>
             <th>Becky Opinion</th>
-            <th>Tried</th>
+            {/* <th>Tried</th> */}
             <th>Who recommends</th>
             <th>Delete</th>
           </tr>
@@ -31,13 +31,29 @@ function FoodTable({ food }) {
             <th>Food</th>
             <th>Where/Recipe?</th>
             <th>Becky Opinion</th>
-            <th>Tried</th>
+            {/* <th>Tried</th> */}
             <th>Who recommends</th>
             <th>Delete</th>
           </tr>
         </tfoot>
         <tbody>
-          <Item />
+          {food.map((item, index) => {
+            // console.log(item);
+            // console.log(item.recipe);
+            // console.log(index);
+            return (
+              <Item
+                foodItem={item.fooditem}
+                foodRecipe={item.recipe}
+                foodOpinion={item.beckyopinion}
+                foodId={item.id}
+                foodTried={item.tried}
+                foodRecommend={item.recommendedby}
+                index={index}
+                key={item.id}
+              />
+            );
+          })}
         </tbody>
       </table>
     </div>

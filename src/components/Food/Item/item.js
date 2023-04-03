@@ -1,22 +1,23 @@
 import React from "react";
 
-function Item() {
+function Item({ foodItem, foodRecipe, foodOpinion, foodTried, foodRecommend }) {
+  // console.log(foodItem);
   return (
     <tr>
       <td>
-        <p>food item</p>
+        <p>{foodItem}</p>
       </td>
       <td>
-        <p>recipe</p>
+        <p>{foodRecipe}</p>
       </td>
       <td>
-        <p>opinion</p>
+        <p>{foodOpinion}</p>
       </td>
+      {/* <td>
+        <p>{foodTried}</p>
+      </td> */}
       <td>
-        <p>tried it</p>
-      </td>
-      <td>
-        <p>recommended by</p>
+        <p>{foodRecommend}</p>
       </td>
       <td>
         <p>trash</p>
