@@ -1,32 +1,49 @@
 import React from "react";
 
-function Form({ food, handleSubmit }) {
+function Form({ food, handleChange, submitForm }) {
   return (
     <div>
       <h6>Form Page</h6>
       <div>
         <form
           autoComplete="off"
-          //   onSubmit={(event) => {
-          //     handleSubmit(event);
-          //   }}
+          onSubmit={(event) => {
+            submitForm(event);
+          }}
         >
-          <input name="formFoodItem" type="text" placeholder="Food..." />
+          <input
+            name="formFoodItem"
+            id="formFoodItem"
+            type="text"
+            placeholder="Food..."
+            onChange={(event) => {
+              handleChange(event);
+            }}
+          />
           <br />
           <br />
           {/* <input type="text" placeholder="Where/Recipe..." /> */}
-          <textarea type="text" placeholder="Where/Recipe..." />
-          <br />
-          <input type="text" placeholder="Recommmended By..." />
-          <br />
-          <button
-            type="submit"
-            onSubmit={(event) => {
-              handleSubmit(event);
+          <textarea
+            name="formFoodRecipe"
+            id="formFoodRecipe"
+            type="text"
+            placeholder="Where/Recipe..."
+            onChange={(event) => {
+              handleChange(event);
             }}
-          >
-            Submit
-          </button>
+          />
+          <br />
+          <input
+            name="formFoodRecommend"
+            id="formFoodRecommend"
+            type="text"
+            placeholder="Recommmended By..."
+            onChange={(event) => {
+              handleChange(event);
+            }}
+          />
+          <br />
+          <button type="submit">Submit</button>
           <br />
         </form>
       </div>
