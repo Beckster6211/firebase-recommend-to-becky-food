@@ -1,5 +1,26 @@
 .App {
   text-align: center;
+  
+}
+
+.foodPage{
+  background-color: blueviolet;
+  border-style: solid;
+}
+
+.foodForm{
+  background-color: crimson;
+  border-style: solid;
+  padding: 1%;
+  margin: 1%;
+}
+
+.foodTable{
+  background-color: aqua;
+  /* width: 90%; */
+  border-style: solid;
+  /* padding: 2%; */
+  margin: 1%;
 }
 
 @media (prefers-reduced-motion: no-preference) {

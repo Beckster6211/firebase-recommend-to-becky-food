@@ -14,7 +14,7 @@ import {
 function Food() {
   const [food, setNewFood] = useState([]);
   const [form, setForm] = useState({});
-  const [updatePage, setUpdatePage] = useState(false);
+  // const [updatePage, setUpdatePage] = useState(false);
   console.log({ food });
 
   function handleChange(event) {

@@ -2,7 +2,7 @@ import React from "react";
 
 function Form({ food, handleChange, submitForm }) {
   return (
-    <div>
+    <div className="foodForm">
       <h6>Form Page</h6>
       <div>
         <form
