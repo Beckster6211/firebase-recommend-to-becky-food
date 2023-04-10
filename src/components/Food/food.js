@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import FoodTable from "./Table/table";
+import Form from "./Form/form";
 import { db } from "../../firebase";
 import {
   query,
@@ -43,6 +44,9 @@ function Food() {
       <div>
         <h3>Recommend to Becky</h3>
         <h4>Food Page</h4>
+      </div>
+      <div>
+        <Form />
       </div>
       <div>
         <FoodTable food={food} deleteFood={deleteFood} />

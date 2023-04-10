@@ -5,7 +5,7 @@ function FoodTable({ food, deleteFood }) {
   // console.log(food);
   return (
     <div className="foodTable">
-      <p>Food Table</p>
+      <h6>Food Table</h6>
       {/* <p>
         food item <br />
         recipe <br />
