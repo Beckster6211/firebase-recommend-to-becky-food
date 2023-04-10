@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from "react";
 import FoodTable from "./Table/table";
 import { db } from "../../firebase";
-import { query, collection, onSnapshot } from "firebase/firestore";
+import {
+  query,
+  collection,
+  onSnapshot,
+  doc,
+  deleteDoc,
+} from "firebase/firestore";
 
 function Food() {
   const [food, setNewFood] = useState([]);
+  console.log({ food });
 
+  /// Read/get all
   useEffect(() => {
     const q = query(collection(db, "Food"));
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
@@ -19,20 +27,16 @@ function Food() {
     return () => unsubscribe();
   }, []);
 
-  /*
-  // read
-  useEffect(() => {
-    const q = query(collection(db, "todo"));
-    const unsubscribe = onSnapshot(q, (querySnapshot) => {
-      let todosArr = [];
-      querySnapshot.forEach((doc) => {
-        todosArr.push({ ...doc.data(), id: doc.id });
-      });
-      setTodos(todosArr);
-    });
-    return () => unsubscribe();
-  }, []);
-  */
+  //////Delete/delete one
+  const deleteFood = async (id) => {
+    // console.log({ id });
+    await deleteDoc(doc(db, "Food", id));
+  };
+
+  // delete
+  //  const deleteTodo = async (id) => {
+  //   await deleteDoc(doc(db, "todo", id));
+  // };
 
   return (
     <div className="foodPage">
@@ -41,7 +45,7 @@ function Food() {
         <h4>Food Page</h4>
       </div>
       <div>
-        <FoodTable food={food} />
+        <FoodTable food={food} deleteFood={deleteFood} />
       </div>
     </div>
   );

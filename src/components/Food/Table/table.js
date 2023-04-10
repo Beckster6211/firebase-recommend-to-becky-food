@@ -1,7 +1,7 @@
 import React from "react";
 import Item from "../Item/item";
 
-function FoodTable({ food }) {
+function FoodTable({ food, deleteFood }) {
   // console.log(food);
   return (
     <div className="foodTable">
@@ -39,7 +39,7 @@ function FoodTable({ food }) {
         <tbody>
           {food.map((item, index) => {
             // console.log(item);
-            // console.log(item.recipe);
+            // console.log(item.tried);
             // console.log(index);
             return (
               <Item
@@ -51,6 +51,7 @@ function FoodTable({ food }) {
                 foodRecommend={item.recommendedby}
                 index={index}
                 key={item.id}
+                removeFood={deleteFood}
               />
             );
           })}
