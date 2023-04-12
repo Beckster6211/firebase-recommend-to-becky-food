@@ -9,6 +9,7 @@ import {
   doc,
   addDoc,
   deleteDoc,
+  updateDoc,
 } from "firebase/firestore";
 
 function Food() {
@@ -59,6 +60,19 @@ function Food() {
     return () => unsubscribe();
   }, []);
 
+  /////Update/change
+  //update for changing tried from true to false
+  // update becky opinion for when tried (disabled those buttons once works as should only be avaliable for me to alter)
+
+  // have tried checkbox
+  const haveTried = async (food) => {
+    console.log("checkbox ticked");
+    console.log(food);
+    await updateDoc(doc(db, "Food", food.id), {
+      tried: !food.tried,
+    });
+  };
+
   //////Delete/delete one
   const deleteFood = async (id) => {
     // console.log({ id });
@@ -79,7 +93,7 @@ function Food() {
         />
       </div>
       <div>
-        <FoodTable food={food} deleteFood={deleteFood} />
+        <FoodTable food={food} foodITried={haveTried} deleteFood={deleteFood} />
       </div>
     </div>
   );

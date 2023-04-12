@@ -21,6 +21,18 @@
   border-style: solid;
   /* padding: 2%; */
   margin: 1%;
+  
+}
+
+.foodTableBody{
+  background-color: darkgreen;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+tr:hover {
+  background-color: #ffff99;
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -1,6 +1,7 @@
 import React from "react";
 
 function Item({
+  food,
   foodItem,
   foodRecipe,
   foodOpinion,
@@ -8,6 +9,7 @@ function Item({
   foodRecommend,
   removeFood,
   foodId,
+  triedIt,
 }) {
   // console.log(foodItem);
   return (
@@ -27,7 +29,14 @@ function Item({
         <p>{foodRecipe}</p>
       </td> */}
       <td>
-        <input type="checkbox" checked={foodTried} readOnly />
+        <input
+          type="checkbox"
+          onChange={() => {
+            triedIt(food);
+          }}
+          checked={foodTried}
+          // readOnly
+        />
         <p>{foodOpinion}</p>
       </td>
       {/* <td>
