@@ -37,6 +37,31 @@ function Item({
           checked={foodTried}
           // readOnly
         />
+        <br />
+        <button
+          name="yesButton"
+          onClick={() => {
+            console.log("Yes Button");
+          }}
+        >
+          Yes
+        </button>
+        <button
+          name="alrightButton"
+          onClick={() => {
+            console.log("Alright Button");
+          }}
+        >
+          Alright
+        </button>
+        <button
+          name="noButton"
+          onClick={() => {
+            console.log("No Button");
+          }}
+        >
+          No
+        </button>
         <p>{foodOpinion}</p>
       </td>
       {/* <td>

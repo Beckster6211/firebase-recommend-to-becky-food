@@ -66,12 +66,15 @@ function Food() {
 
   // have tried checkbox
   const haveTried = async (food) => {
-    console.log("checkbox ticked");
-    console.log(food);
+    // console.log("checkbox ticked");
+    // console.log(food);
     await updateDoc(doc(db, "Food", food.id), {
       tried: !food.tried,
     });
   };
+  ///becky opinion
+
+  const changeOpinion = async () => {};
 
   //////Delete/delete one
   const deleteFood = async (id) => {
