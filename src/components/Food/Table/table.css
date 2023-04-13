@@ -1,0 +1,52 @@
+.foodTableComponent{
+    background-color: aqua;
+    /* width: 95%; */
+    /* border-style: solid;
+    border-color: black; */
+    /* padding: 2%; */
+    margin: 1%;
+    
+    
+  }
+
+  .foodTable{
+    table-layout: auto;
+    width:100%;
+    border-collapse: collapse;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  }
+
+  .tableHead{
+    background-color: grey;
+    /* width: 95%;
+   padding: 5%; */
+  }
+
+  .tableHeader{
+    
+    /* 
+    to try and make the table head sticky
+    position: sticky;
+    top:0; */
+    background-color: gold;
+    border-style: solid;
+    /* border-color: magenta; */
+    
+  }
+
+  /* .foodTableBody{
+    background-color: darkgreen;
+  } */
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  tr:hover {
+    background-color: #ffff99;
+  }
+
+  .tableFoot{
+    background-color: blue;
+  }
+

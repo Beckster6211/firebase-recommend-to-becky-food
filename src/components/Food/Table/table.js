@@ -1,10 +1,11 @@
 import React from "react";
 import Item from "../Item/item";
+import "./table.css";
 
 function FoodTable({ food, foodITried, handleOpinion, deleteFood }) {
   // console.log(food);
   return (
-    <div className="foodTable">
+    <div className="foodTableComponent">
       <h6>Food Table</h6>
       {/* <p>
         food item <br />
@@ -15,18 +16,18 @@ function FoodTable({ food, foodITried, handleOpinion, deleteFood }) {
         who recommend <br />
         delete from table
       </p> */}
-      <table>
-        <thead>
+      <table className="foodTable">
+        <thead className="tableHead">
           <tr>
-            <th>Food</th>
-            <th>Where/Recipe?</th>
-            <th>Becky Opinion</th>
+            <th className="tableHeader">Food</th>
+            <th className="tableHeader">Where/Recipe?</th>
+            <th className="tableHeader">Becky Opinion</th>
             {/* <th>Tried</th> */}
-            <th>Who recommends</th>
-            <th>Delete</th>
+            <th className="tableHeader">Who recommends</th>
+            <th className="tableHeader">Delete</th>
           </tr>
         </thead>
-        <tfoot>
+        <tfoot className="tableFoot">
           <tr>
             <th>Food</th>
             <th>Where/Recipe?</th>

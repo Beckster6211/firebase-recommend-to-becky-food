@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import FoodTable from "./Table/table";
 import Form from "./Form/form";
+import "./food.css";
+
 import { db } from "../../firebase";
 import {
   query,
