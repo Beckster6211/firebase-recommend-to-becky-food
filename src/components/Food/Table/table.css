@@ -1,8 +1,9 @@
 .foodTableComponent{
-    background-color: aqua;
+    
     /* width: 95%; */
-    /* border-style: solid;
-    border-color: black; */
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
     /* padding: 2%; */
     margin: 1%;
     
@@ -10,6 +11,7 @@
   }
 
   .foodTable{
+    background-color: aqua;
     table-layout: auto;
     width:100%;
     border-collapse: collapse;
