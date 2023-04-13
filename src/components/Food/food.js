@@ -74,7 +74,16 @@ function Food() {
   };
   ///becky opinion
 
-  const changeOpinion = async () => {};
+  const changeOpinion = async (food, event) => {
+    // console.log("button clicked");
+    // console.log(`change opinion ${food.beckyopinion} `);
+    // console.log(event.target.name);
+    let beckyOpinion = event.target.name;
+    await updateDoc(doc(db, "Food", food.id), {
+      beckyopinion: beckyOpinion,
+    });
+    // console.log(`becky opinion changed ${food.beckyopinion}`);
+  };
 
   //////Delete/delete one
   const deleteFood = async (id) => {
@@ -96,7 +105,12 @@ function Food() {
         />
       </div>
       <div>
-        <FoodTable food={food} foodITried={haveTried} deleteFood={deleteFood} />
+        <FoodTable
+          food={food}
+          foodITried={haveTried}
+          deleteFood={deleteFood}
+          handleOpinion={changeOpinion}
+        />
       </div>
     </div>
   );

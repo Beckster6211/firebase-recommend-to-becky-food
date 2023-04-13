@@ -10,6 +10,7 @@ function Item({
   removeFood,
   foodId,
   triedIt,
+  changeOpinion,
 }) {
   // console.log(foodItem);
   return (
@@ -39,28 +40,37 @@ function Item({
         />
         <br />
         <button
-          name="yesButton"
-          onClick={() => {
-            console.log("Yes Button");
+          name="😋"
+          onClick={(event) => {
+            changeOpinion(food, event);
           }}
         >
           Yes
         </button>
         <button
-          name="alrightButton"
-          onClick={() => {
-            console.log("Alright Button");
+          name="🤫"
+          onClick={(event) => {
+            changeOpinion(food, event);
           }}
         >
           Alright
         </button>
         <button
-          name="noButton"
-          onClick={() => {
-            console.log("No Button");
+          name="🤮"
+          onClick={(event) => {
+            changeOpinion(food, event);
           }}
         >
           No
+        </button>
+        {/* comment this one out once done */}
+        <button
+          name="🤷‍♀️"
+          onClick={(event) => {
+            changeOpinion(food, event);
+          }}
+        >
+          Reset
         </button>
         <p>{foodOpinion}</p>
       </td>

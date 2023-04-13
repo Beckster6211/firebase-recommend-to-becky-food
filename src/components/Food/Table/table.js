@@ -1,7 +1,7 @@
 import React from "react";
 import Item from "../Item/item";
 
-function FoodTable({ food, foodITried, deleteFood }) {
+function FoodTable({ food, foodITried, handleOpinion, deleteFood }) {
   // console.log(food);
   return (
     <div className="foodTable">
@@ -54,6 +54,7 @@ function FoodTable({ food, foodITried, deleteFood }) {
                 key={item.id}
                 removeFood={deleteFood}
                 triedIt={foodITried}
+                changeOpinion={handleOpinion}
               />
             );
           })}
