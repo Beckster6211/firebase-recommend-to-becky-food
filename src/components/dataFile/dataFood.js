@@ -49,6 +49,13 @@ let food = [
   //   tried: false,
   //   beckyopinion: "🤷‍♀️",
   // },
+  {
+    fooditem: "Chicken BigMac",
+    recipe: "McDonalds",
+    recommendedBy: "Me",
+    tried: true,
+    beckyOpinion: "🤫"
+  }
 ];
 
 module.exports = food;
