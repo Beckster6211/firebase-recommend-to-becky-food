@@ -49,13 +49,13 @@ let food = [
   //   tried: false,
   //   beckyopinion: "🤷‍♀️",
   // },
-  {
-    fooditem: "Chicken BigMac",
-    recipe: "McDonalds",
-    recommendedBy: "Me",
-    tried: true,
-    beckyOpinion: "🤫"
-  }
+  // {
+  //   fooditem: "Chicken BigMac",
+  //   recipe: "McDonalds",
+  //   recommendedby: "Me",
+  //   tried: true,
+  //   beckyopinion: "🤫"
+  // }
 ];
 
 module.exports = food;
