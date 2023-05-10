@@ -1,10 +1,12 @@
 import React from "react";
-import "./form.css";
+import styles from "./form.module.css";
 
 function Form({ food, handleChange, submitForm }) {
   return (
-    <div className="foodForm">
+    <div className={styles.foodForm}>
       <h6>Form Page</h6>
+      <details>
+      <summary>Form Summary</summary>
       <div>
         <form
           autoComplete="off"
@@ -48,6 +50,7 @@ function Form({ food, handleChange, submitForm }) {
           <br />
         </form>
       </div>
+      </details>
     </div>
   );
 }
