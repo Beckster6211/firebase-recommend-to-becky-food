@@ -1,6 +1,19 @@
 import React from "react";
 import styles from "./form.module.css";
 
+/*
+css like the guy in video does about firebase todo list
+const style = {
+  bg: `a color`,
+  container: `bg-slate-100 max-w-[500px] w-full,
+  heading: `text-3xl font-bold text-center text-grey-800`
+}
+
+<div className = {style.bg}>
+{style.container}
+</div>
+*/
+
 function Form({ food, handleChange, submitForm }) {
   return (
     <div className={styles.foodForm}>

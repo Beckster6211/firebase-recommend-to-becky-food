@@ -96,7 +96,7 @@ function Food() {
   return (
     <div className="foodPage">
       <div>
-        <h3>Recommend to Becky</h3>
+        {/* <h3>Recommend to Becky</h3> */}
         <h4>Food Page</h4>
       </div>
       <div>
