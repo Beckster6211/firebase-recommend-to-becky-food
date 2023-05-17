@@ -61,7 +61,7 @@ return (
         
         <button>login</button>
         <br/>
-        <LoginForm/>
+        <LoginForm />
         {/* <input name = "email" placeholder = "Email" onChange = {(event)=>{getEmail(event)}}/>
         <input name="password" placeholder ="Password" onChange = {(event) => {getPassword(event)}}/>
         <button onClick={createUser}>Create User</button> */}
