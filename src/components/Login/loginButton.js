@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import {authentication} from "../../firebase"
-import {createUserWithEmailAndPassword, signInWithEmailAndPassword} from "firebase/auth"
+import {createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut} from "firebase/auth"
 
 function Login(){
 
@@ -8,12 +8,13 @@ function Login(){
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
-    function beckyEmail(event){
+    // console.log(signIn)
+    function getEmail(event){
         console.log(event.target.value)
         setEmail(event.target.value)
     }
 
-    function beckyPassword(event){
+    function getPassword(event){
         console.log(event.target.value)
         setPassword(event.target.value)
     } 
@@ -30,14 +31,27 @@ function Login(){
     const errorMessage = error.message;
     console.log(errorMessage)
   });
-    // const signInUser = () =>{
-    //     signInWithEmailAndPassword(authentication, email, password).then((userCredential)=>{
-    //         console.log(userCredential)
-    //         const user = userCredential.user
-    //         console.log({user})
-    //     }).catch((error)=>{
-    //         console.log(error)
-    //     })
+    }
+    
+    const signInUser = () => {
+        signInWithEmailAndPassword(authentication, email, password).then((userCredential)=>{
+            console.log(userCredential)
+            const user = userCredential.user
+            console.log({user})
+            setSignIn(true)
+        }).catch((error)=>{
+            console.log(error)
+        })
+    }
+
+    const signOutUser = () => {
+        signOut(authentication).then((response)=>{
+            //sign out successful
+            setSignIn(false)
+            console.log("sign out successful")
+        }).catch((error)=>{
+            console.log(error)
+        })
     }
 
 return (
@@ -45,11 +59,17 @@ return (
         
         <button>login</button>
         <br/>
-        <input name = "email" placeholder = "Email" onChange = {(event)=>{beckyEmail(event)}}/>
-        <input name="password" placeholder ="Password" onChange = {(event) => {beckyPassword(event)}}/>
+        <input name = "email" placeholder = "Email" onChange = {(event)=>{getEmail(event)}}/>
+        <input name="password" placeholder ="Password" onChange = {(event) => {getPassword(event)}}/>
+        <button onClick={createUser}>Create User</button>
         {/* <input value = {email} placeholder = "Email" onChange = {text => setEmail(text)}/> */}
         {/* <input value = {password} placeholder ="Password" onChange = {text => setPassword(text)}/> */}
-        <button onClick={createUser}>Sign In</button>
+        {signIn === true ? 
+        <button onClick={signOutUser}>Sign Out</button>
+        : 
+        <button onClick={signInUser}>Sign In</button>
+        }
+        
     </div>
 )
 }
