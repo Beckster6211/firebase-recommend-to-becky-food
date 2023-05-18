@@ -81,6 +81,7 @@ function Item({
         />
         </td>
       } */}
+      {/* remove the opinion button and only have those displayed to me*/}
       {
         becky === false ?
         <td>
