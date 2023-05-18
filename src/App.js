@@ -3,38 +3,31 @@ import Login from "./components/Login/loginButton";
 import Food from "./components/Food/food";
 
 import React, {useState} from "react"
-import {authentication} from "./firebase"
-import {createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut} from "firebase/auth"
+// import {getAuth, onAuthStateChanged} from "firebase/auth"
 
 function App() {
+// const [isBecky, setIsBecky] = useState(false)
+// console.log({isBecky})
 
-      const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
-
-    
-    const createUser = () => {
-        createUserWithEmailAndPassword(authentication, email, password).then((userCredential) => {
-    // Signed in 
-    console.log(userCredential)
-    const user = userCredential.user;
-    console.log(user)
-    
-  }).catch((error) => {
-    const errorCode = error.code;
-    console.log(errorCode)
-    const errorMessage = error.message;
-    console.log(errorMessage)
-   
-  });
-    }
-
-
-
+// const auth = getAuth()    
+// onAuthStateChanged(auth, (user)=>{
+//   console.log({user})
+//   // console.log(user.uid)
+//         // console.log(user.uid)
+//         if(user === null){
+//           console.log("this user isnt becky")
+//           setIsBecky(false)
+//         } else if (user.uid === "QKMfrQjVekU1HqN4VUlnSyR44ks2"){
+//           console.log("this user is Becky")
+//           setIsBecky(true)
+//         }
+//     })
 
   return (
     <div className="App">
       <h3>Recommend to Becky</h3>
       <Login/>
+      {/* <Food Becky = {isBecky}/> */}
       <Food />
     </div>
   );

@@ -8,8 +8,7 @@ function LoginForm(){
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
-    
-    
+        
     // console.log(signIn)
     function getEmail(event){
         console.log(event.target.value)
@@ -42,9 +41,9 @@ function LoginForm(){
             console.log(userCredential)
             let user = userCredential.user
             console.log({user})
-            if(user.uid === "tFvXi6smSTTgohw9kQMQrPIGUZ22"){
-             setBecky(true)
-            }
+            // if(user.uid === "ZsU3UpgsYJgXbzWS1sz8uOyxunq1"){
+            //  setBecky(true)
+            // }
             setSignIn(true)
             // window.location.reload();
         }).catch((error)=>{
@@ -84,10 +83,10 @@ return (
         } */}
         <button onClick={signInUser}>Sign In</button>
         <button onClick={signOutUser}>Sign Out</button>
-        {becky === true ? 
+        {/* {becky === true ? 
         <p>"Hi Becky"</p>
         : <p>"Hello someone else"</p>
-    }
+    } */}
     </div>
 )
 }

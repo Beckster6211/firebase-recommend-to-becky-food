@@ -1,5 +1,8 @@
-import React from "react";
+// import React from "react";
 import "./item.css";
+
+import React, {useState} from "react"
+import {getAuth, onAuthStateChanged} from "firebase/auth"
 
 function Item({
   food,
@@ -14,6 +17,28 @@ function Item({
   changeOpinion,
 }) {
   // console.log(foodItem);
+
+
+
+
+  /////////// auth in item to stop passing to each item
+  const [isBecky, setIsBecky] = useState(false)
+console.log({isBecky})
+
+const auth = getAuth()    
+onAuthStateChanged(auth, (user)=>{
+  console.log({user})
+  // console.log(user.uid)
+        // console.log(user.uid)
+        if(user === null){
+          console.log("this user isnt becky")
+          setIsBecky(false)
+        } else if (user.uid === "QKMfrQjVekU1HqN4VUlnSyR44ks2"){
+          console.log("this user is Becky")
+          setIsBecky(true)
+        }
+    })
+
   return (
     <tr>
       <td>
@@ -30,6 +55,33 @@ function Item({
       {/* <td>
         <p>{foodRecipe}</p>
       </td> */}
+      {
+        isBecky === false ?
+        <td>
+          <input
+          type="checkbox"
+          // onChange={() => {
+          //   triedIt(food);
+          // }}
+          onChange = {()=>{
+            console.log("not for you")
+          }}
+          checked={foodTried}
+          // disabled
+          readOnly
+        />
+        </td>
+        :<td>
+          <input
+          type="checkbox"
+          onChange={() => {
+            triedIt(food);
+          }}
+          checked={foodTried}
+          readOnly
+        />
+        </td>
+      }
       <td>
         <input
           type="checkbox"
