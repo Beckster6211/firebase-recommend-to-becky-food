@@ -3,32 +3,32 @@ import Login from "./components/Login/loginButton";
 import Food from "./components/Food/food";
 
 import React, {useState} from "react"
-// import {getAuth, onAuthStateChanged} from "firebase/auth"
+import {getAuth, onAuthStateChanged} from "firebase/auth"
 
 function App() {
-// const [isBecky, setIsBecky] = useState(false)
-// console.log({isBecky})
+const [isBecky, setIsBecky] = useState(false)
+console.log({isBecky})
 
-// const auth = getAuth()    
-// onAuthStateChanged(auth, (user)=>{
-//   console.log({user})
-//   // console.log(user.uid)
-//         // console.log(user.uid)
-//         if(user === null){
-//           console.log("this user isnt becky")
-//           setIsBecky(false)
-//         } else if (user.uid === "QKMfrQjVekU1HqN4VUlnSyR44ks2"){
-//           console.log("this user is Becky")
-//           setIsBecky(true)
-//         }
-//     })
+const auth = getAuth()    
+onAuthStateChanged(auth, (user)=>{
+  console.log({user})
+  // console.log(user.uid)
+        // console.log(user.uid)
+        if(user === null){
+          console.log("this user isnt becky")
+          setIsBecky(false)
+        } else if (user.uid === "QKMfrQjVekU1HqN4VUlnSyR44ks2"){
+          console.log("this user is Becky")
+          setIsBecky(true)
+        }
+    })
 
   return (
     <div className="App">
       <h3>Recommend to Becky</h3>
       <Login/>
-      {/* <Food Becky = {isBecky}/> */}
-      <Food />
+      <Food Becky = {isBecky}/>
+      {/* <Food /> */}
     </div>
   );
 }

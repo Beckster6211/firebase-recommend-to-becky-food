@@ -56,7 +56,7 @@ function FoodTable({userBecky, food, foodITried, handleOpinion, deleteFood }) {
                 removeFood={deleteFood}
                 triedIt={foodITried}
                 changeOpinion={handleOpinion}
-                // becky={userBecky}
+                becky={userBecky}
               />
             );
           })}
