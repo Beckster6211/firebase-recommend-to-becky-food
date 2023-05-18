@@ -14,7 +14,7 @@ import {
   updateDoc,
 } from "firebase/firestore";
 
-function Food() {
+function Food({Becky}) {
   const [food, setNewFood] = useState([]);
   const [form, setForm] = useState({});
   // const [updatePage, setUpdatePage] = useState(false);
@@ -108,6 +108,7 @@ function Food() {
       </div>
       <div>
         <FoodTable
+          userBecky={Becky}
           food={food}
           foodITried={haveTried}
           deleteFood={deleteFood}

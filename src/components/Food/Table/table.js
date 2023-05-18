@@ -2,7 +2,7 @@ import React from "react";
 import Item from "../Item/item";
 import "./table.css";
 
-function FoodTable({ food, foodITried, handleOpinion, deleteFood }) {
+function FoodTable({userBecky, food, foodITried, handleOpinion, deleteFood }) {
   // console.log(food);
   return (
     <div className="foodTableComponent">
@@ -56,6 +56,7 @@ function FoodTable({ food, foodITried, handleOpinion, deleteFood }) {
                 removeFood={deleteFood}
                 triedIt={foodITried}
                 changeOpinion={handleOpinion}
+                becky={userBecky}
               />
             );
           })}

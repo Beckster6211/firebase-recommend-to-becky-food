@@ -55,6 +55,13 @@ let food = [
   //   recommendedby: "Me",
   //   tried: true,
   //   beckyopinion: "🤫"
+  // },
+  // {
+  //   fooditem: "Sugar sandwich",
+  //   recipe: "https://www.food.com/recipe/sugar-sandwiches-216894",
+  //   recommendedby: "Gill (Wilko)",
+  //   tried: false,
+  //   beckyopinion: "🤷‍♀️"
   // }
 ];
 
