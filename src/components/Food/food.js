@@ -3,6 +3,9 @@ import FoodTable from "./Table/table";
 import Form from "./Form/form";
 import "./food.css";
 
+import Nav from "../Nav/nav";
+
+
 import { db } from "../../firebase";
 import {
   query,
@@ -96,6 +99,8 @@ function Food({Becky}) {
   return (
     <div className="foodPage">
       <div>
+        <br/>
+        <Nav/>
         {/* <h3>Recommend to Becky</h3> */}
         <h4>Food Page</h4>
       </div>

@@ -2,6 +2,7 @@ import "./App.css";
 import Login from "./components/Login/loginButton";
 import Food from "./components/Food/food";
 import Home from "./components/Home/home";
+import Header from "./components/Header/header";
 
 import React, {useState} from "react"
 import {getAuth, onAuthStateChanged} from "firebase/auth"
@@ -27,14 +28,20 @@ onAuthStateChanged(auth, (user)=>{
 
   return (
   <div className="App">
-    <h3>Recommend to Becky</h3>
-      <nav>
+    <Header/>
+    {/* <header>
+      <h3>Recommend to Becky</h3>
+      <button><Link to = "/login" >Login</Link></button>
+    </header> */}
+    <br/>
+      {/* <div>
+       <nav>
           <button><Link to = "/" >Home</Link></button>
-          <button><Link to = "/login" >Login</Link></button>
+          
           <button><Link to = "/food" >Food</Link></button>
        
-      </nav>
-
+        </nav>
+      </div> */}
     <Routes>
       <Route path = "/" element = {<Home/>} />
       <Route path = "/food" element ={<Food Becky = {isBecky}/>} />
