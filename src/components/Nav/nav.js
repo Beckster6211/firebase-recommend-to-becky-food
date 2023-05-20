@@ -7,7 +7,7 @@ function Nav(){
             <nav>
                 <button><Link to = "/" >Home</Link></button>
                 <button><Link to = "/food" >Food</Link></button>
-       
+                
             </nav>
       </div>
     )
