@@ -100,7 +100,7 @@ function Food({Becky}) {
     <div className="foodPage">
       <div>
         <br/>
-        <Nav/>
+        {/* <Nav/> */}
         {/* <h3>Recommend to Becky</h3> */}
         <h4>Food Page</h4>
       </div>

@@ -3,6 +3,7 @@ import Login from "./components/Login/loginButton";
 import Food from "./components/Food/food";
 import Home from "./components/Home/home";
 import Header from "./components/Header/header";
+import Nav from "./components/Nav/nav";
 
 import React, {useState} from "react"
 import {getAuth, onAuthStateChanged} from "firebase/auth"
@@ -29,6 +30,7 @@ onAuthStateChanged(auth, (user)=>{
   return (
   <div className="App">
     <Header/>
+    <Nav/>
     {/* <header>
       <h3>Recommend to Becky</h3>
       <button><Link to = "/login" >Login</Link></button>

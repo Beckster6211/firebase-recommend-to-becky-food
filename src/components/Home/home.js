@@ -6,7 +6,7 @@ import Nav from "../Nav/nav"
 function Home(){
     return (
         <div>
-            <Nav/>
+            {/* <Nav/> */}
             <h2>Home</h2>
             <p>This is the home page</p>
             <p>Explain the app</p>
