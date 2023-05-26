@@ -8,6 +8,8 @@ function Home(){
         <div>
             <Nav/>
             <h2>Home</h2>
+            <p>This is the home page</p>
+            <p>Explain the app</p>
             
             
             {/* <div>
