@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 import {authentication} from "../../firebase"
 import {createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut} from "firebase/auth"
+import {Link} from "react-router-dom"
 
 function LoginForm(){
     const [becky, setBecky] = useState(false)
@@ -70,19 +71,27 @@ return (
         <br/>
         <button onClick={createUser}>Create User</button>
         <br/>
+        <br/>
         <input type = "email" placeholder = {"Email..."} autoComplete="off" onChange = {(event)=>{getEmail(event)}}/>
-        &nbsp;
+        <br/>
+        <br/>
         <input type="password" placeholder ="Password" autoComplete="off" onChange = {(event) => {getPassword(event)}}/>
        
         {/* <button onClick={createUser}>Create User</button> */}
+        <br/>
         <br/>
         {/* {signIn === true ? 
         <button onClick={signOutUser}>Sign Out</button>
         : 
         <button onClick={signInUser}>Sign In</button>
-        } */}
-        <button onClick={signInUser}>Sign In</button>
-        <button onClick={signOutUser}>Sign Out</button>
+        } */} 
+        <br/>
+        <button onClick={signInUser}> <Link to = "/" >Sign In</Link></button>
+        <br/>
+       
+        /
+        <br/>
+        <button onClick={signOutUser}><Link to = "/" >Sign Out</Link></button>
         {/* {becky === true ? 
         <p>"Hi Becky"</p>
         : <p>"Hello someone else"</p>

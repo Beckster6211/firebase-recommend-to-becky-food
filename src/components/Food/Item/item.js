@@ -18,7 +18,7 @@ function Item({
   becky
 }) {
   // console.log(foodItem);
-  console.log({becky})
+  // console.log({becky})
 
   /////////// auth in item to stop passing to each item
 //   const [isBecky, setIsBecky] = useState(false)

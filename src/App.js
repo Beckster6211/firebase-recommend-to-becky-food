@@ -1,9 +1,12 @@
 import "./App.css";
 import Login from "./components/Login/loginButton";
 import Food from "./components/Food/food";
+import Home from "./components/Home/home";
+import Header from "./components/Header/header";
 
 import React, {useState} from "react"
 import {getAuth, onAuthStateChanged} from "firebase/auth"
+import {Route, Routes, Link} from "react-router-dom"
 
 function App() {
 const [isBecky, setIsBecky] = useState(false)
@@ -24,11 +27,31 @@ onAuthStateChanged(auth, (user)=>{
     })
 
   return (
-    <div className="App">
+  <div className="App">
+    <Header/>
+    {/* <header>
       <h3>Recommend to Becky</h3>
-      <Login/>
-      <Food Becky = {isBecky}/>
+      <button><Link to = "/login" >Login</Link></button>
+    </header> */}
+    <br/>
+      {/* <div>
+       <nav>
+          <button><Link to = "/" >Home</Link></button>
+          
+          <button><Link to = "/food" >Food</Link></button>
+       
+        </nav>
+      </div> */}
+    <Routes>
+      <Route path = "/" element = {<Home/>} />
+      <Route path = "/food" element ={<Food Becky = {isBecky}/>} />
+      <Route path = "/login" element = {<Login/>} />
+      {/* <Login/> */}
+      {/* food will act as home page for now
+      <Food Becky = {isBecky}/> */}
       {/* <Food /> */}
+      
+    </Routes>
     </div>
   );
 }

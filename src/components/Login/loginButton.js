@@ -59,7 +59,7 @@ function Login(){
 return (
     <div>
         
-        <button>login</button>
+        {/* <button>login</button> */}
         <br/>
         <LoginForm />
         {/* <input name = "email" placeholder = "Email" onChange = {(event)=>{getEmail(event)}}/>
