@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import FoodTable from "./Table/table";
-import Form from "./Form/form";
+import FoodForm from "./Form/form";
 import "./food.css";
 
 import Nav from "../Nav/nav";
@@ -105,7 +105,7 @@ function Food({Becky}) {
         <h4>Food Page</h4>
       </div>
       <div>
-        <Form
+        <FoodForm
           food={food}
           handleChange={handleChange}
           submitForm={handleSubmit}

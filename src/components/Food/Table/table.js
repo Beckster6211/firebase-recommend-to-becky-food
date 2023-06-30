@@ -16,6 +16,7 @@ function FoodTable({userBecky, food, foodITried, handleOpinion, deleteFood }) {
         who recommend <br />
         delete from table
       </p> */}
+      <details>
       <table className="foodTable">
         <thead className="tableHead">
           <tr>
@@ -62,6 +63,7 @@ function FoodTable({userBecky, food, foodITried, handleOpinion, deleteFood }) {
           })}
         </tbody>
       </table>
+      </details>
     </div>
   );
 }

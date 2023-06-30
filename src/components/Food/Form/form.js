@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./form.module.css";
+// import styles from "./form.module.css";
 
 /*
 css like the guy in video does about firebase todo list
@@ -14,11 +14,50 @@ const style = {
 </div>
 */
 
-function Form({ food, handleChange, submitForm }) {
+import Container from "react-bootstrap/Container";
+import Card from "react-bootstrap/Card"
+import Form from "react-bootstrap/Form"
+import FloatingLabel from "react-bootstrap/FloatingLabel";
+import Button from "react-bootstrap/button"
+
+function FoodForm({ food, handleChange, submitForm }) {
   return (
-    <div className={styles.foodForm}>
-      <h6>Form Page</h6>
-      <details>
+    <Container fluid className="bg-warning border border-warning border-3 rounded p-1">
+      {/* <h6>Form Page</h6> */}
+      <Container fluid className="bg-warning p-2">
+        <Card className ="bg-warning-subtle border border-warning-subtle" >
+          <Card.Body>
+          <Card.Title>Food Form</Card.Title>
+
+          <Form className = "bg-warning-subtle p-1">
+            <Form.Group className = ""  controlId="formFood">
+              {/* <Form.Label>Food</Form.Label> */}
+              <FloatingLabel className="font-monospace text-danger " controlId = "formFoodInput" label= "Food...">
+                <Form.Control className="text-break border border-dark border-3" type="text" placeholder = "Food..." ></Form.Control>
+              </FloatingLabel>
+            </Form.Group>
+
+            <Form.Group className="pt-2">
+              {/* <Form.Label>Recipe</Form.Label> */}
+              <FloatingLabel controlId = "formFoodRecipeTextarea" label= "Recipe/Ingredients...">
+                <Form.Control className="border border-dark border-3" as = "textarea" style = {{height:"110px"}}placeholder = "Recipe/Ingredients..."></Form.Control>
+              </FloatingLabel>
+            </Form.Group>
+
+            <Form.Group className="py-2" controlId="formFoodRecommend">
+              {/* <Form.Label>Recommended By</Form.Label> */}
+              <FloatingLabel controlId = "formFoodRecommendInput" label="Recommended By..." >
+                <Form.Control className="border border-dark border-3" type="text" placeholder="Recommended By..."></Form.Control>
+              </FloatingLabel>
+            </Form.Group>
+
+            <Button className="border border-dark border-3 text-dark" variant = "info">Submit/Enjoy</Button>
+
+          </Form>
+          </Card.Body>
+        </Card>
+      </Container>
+      {/* <details>
       <summary>Form Summary</summary>
       <div>
         <form
@@ -26,8 +65,8 @@ function Form({ food, handleChange, submitForm }) {
           onSubmit={(event) => {
             submitForm(event);
           }}
-        >
-          <input
+        > */}
+          {/* <input
             name="formFoodItem"
             id="formFoodItem"
             type="text"
@@ -37,9 +76,9 @@ function Form({ food, handleChange, submitForm }) {
             }}
           />
           <br />
-          <br />
+          <br /> */}
           {/* <input type="text" placeholder="Where/Recipe..." /> */}
-          <textarea
+          {/* <textarea
             name="formFoodRecipe"
             id="formFoodRecipe"
             type="text"
@@ -47,8 +86,8 @@ function Form({ food, handleChange, submitForm }) {
             onChange={(event) => {
               handleChange(event);
             }}
-          />
-          <br />
+          /> */}
+          {/* <br />
           <input
             name="formFoodRecommend"
             id="formFoodRecommend"
@@ -63,8 +102,8 @@ function Form({ food, handleChange, submitForm }) {
           <br />
         </form>
       </div>
-      </details>
-    </div>
+      </details> */}
+    </Container>
   );
 }
-export default Form;
+export default FoodForm;
