@@ -29,29 +29,56 @@ function FoodForm({ food, handleChange, submitForm }) {
           <Card.Body>
           <Card.Title>Food Form</Card.Title>
 
-          <Form className = "bg-warning-subtle p-1">
-            <Form.Group className = ""  controlId="formFood">
+          <Form className = "bg-warning-subtle p-1" 
+          autoComplete="off"
+          onSubmit={(event) => {
+            submitForm(event);
+          }}>
+
+            <Form.Group className = ""  controlId="formFood"
+            >
               {/* <Form.Label>Food</Form.Label> */}
-              <FloatingLabel className="font-monospace text-danger " controlId = "formFoodInput" label= "Food...">
-                <Form.Control className="text-break border border-dark border-3" type="text" placeholder = "Food..." ></Form.Control>
+              <FloatingLabel controlId = "formFoodItem" label= "Food...">
+                <Form.Control className="text-break border border-dark border-3" type="text" placeholder = "Food..." 
+                name="formFoodItem"
+                // id="formFoodItem"
+                // type="text"
+                // placeholder="Food..."
+                onChange={(event) => {
+                  handleChange(event);
+                }}></Form.Control>
               </FloatingLabel>
             </Form.Group>
 
             <Form.Group className="pt-2">
               {/* <Form.Label>Recipe</Form.Label> */}
-              <FloatingLabel controlId = "formFoodRecipeTextarea" label= "Recipe/Ingredients...">
-                <Form.Control className="border border-dark border-3" as = "textarea" style = {{height:"110px"}}placeholder = "Recipe/Ingredients..."></Form.Control>
+              <FloatingLabel controlId = "formFoodRecipe" label= "Recipe/Ingredients...">
+                <Form.Control className="border border-dark border-3" as = "textarea" style = {{height:"110px"}} placeholder = "Recipe/Ingredients..."
+                name="formFoodRecipe"
+                // id="formFoodRecipe"
+                // type="text"
+                // placeholder="Where/Recipe..."
+                onChange={(event) => {
+                  handleChange(event);
+                }}></Form.Control>
               </FloatingLabel>
             </Form.Group>
 
             <Form.Group className="py-2" controlId="formFoodRecommend">
               {/* <Form.Label>Recommended By</Form.Label> */}
-              <FloatingLabel controlId = "formFoodRecommendInput" label="Recommended By..." >
-                <Form.Control className="border border-dark border-3" type="text" placeholder="Recommended By..."></Form.Control>
+              <FloatingLabel controlId = "formFoodRecommend" label="Recommended By..." >
+                <Form.Control className="border border-dark border-3" type="text" placeholder="Recommended By..."
+                name="formFoodRecommend"
+                // id="formFoodRecommend"
+                // type="text"
+                // placeholder="Recommmended By..."
+                onChange={(event) => {
+                  handleChange(event);
+                }}></Form.Control>
               </FloatingLabel>
             </Form.Group>
 
-            <Button className="border border-dark border-3 text-dark" variant = "info">Submit/Enjoy</Button>
+            <Button className="border border-dark border-3 text-dark" variant = "info" type = "submit">Submit/Enjoy</Button>
 
           </Form>
           </Card.Body>
