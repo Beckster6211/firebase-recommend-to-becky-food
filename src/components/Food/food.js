@@ -5,6 +5,9 @@ import "./food.css";
 
 import Nav from "../Nav/nav";
 
+import Accordion from 'react-bootstrap/Accordion';
+import Container from "react-bootstrap/Container"
+
 
 import { db } from "../../firebase";
 import {
@@ -103,23 +106,42 @@ function Food({Becky}) {
         {/* <Nav/> */}
         {/* <h3>Recommend to Becky</h3> */}
         <h4 className = "header">FOOD PAGE</h4>
+        <br/>
       </div>
-      <div>
-        <FoodForm
-          food={food}
-          handleChange={handleChange}
-          submitForm={handleSubmit}
-        />
-      </div>
-      <div>
-        <FoodTable
-          userBecky={Becky}
-          food={food}
-          foodITried={haveTried}
-          deleteFood={deleteFood}
-          handleOpinion={changeOpinion}
-        />
-      </div>
+      <Accordion defaultActiveKey="1" className="p-2 border border-dark border-3 rounded bg-light">
+        <Accordion.Item eventKey="0" className="border border-dark border-3 rounded ">
+          <Accordion.Header className="bg-warning">
+            <Container fluid className="fs-4 text-center">
+              Food Form
+              {/* <h3 >Form for Food</h3> */}
+              </Container>
+           </Accordion.Header>
+          <Accordion.Body className="">
+            {/* <div> */}
+              <FoodForm
+              food={food}
+              handleChange={handleChange}
+              submitForm={handleSubmit}
+            />
+            {/* </div> */}
+          </Accordion.Body>
+        </Accordion.Item>
+        <br/>
+        <Accordion.Item eventKey="1">
+          <Accordion.Header>Food Table</Accordion.Header>
+          <Accordion.Body>
+            <div>
+              <FoodTable
+              userBecky={Becky}
+              food={food}
+              foodITried={haveTried}
+              deleteFood={deleteFood}
+              handleOpinion={changeOpinion}
+            />
+            </div>
+          </Accordion.Body>
+        </Accordion.Item>
+      </Accordion>
     </div>
   );
 }
