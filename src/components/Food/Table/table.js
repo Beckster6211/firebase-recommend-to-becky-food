@@ -3,11 +3,13 @@ import Item from "../Item/item";
 import "./table.css";
 
 import Table from 'react-bootstrap/Table';
+import Container from "react-bootstrap/Container";
+import Card from "react-bootstrap/Card"
 
 function FoodTable({userBecky, food, foodITried, handleOpinion, deleteFood }) {
   // console.log(food);
   return (
-    <div className="foodTableComponent">
+    <div className="foodTableComponent ">
       {/* <h6>Food Table</h6> */}
       {/* <p>
         food item <br />
@@ -18,28 +20,30 @@ function FoodTable({userBecky, food, foodITried, handleOpinion, deleteFood }) {
         who recommend <br />
         delete from table
       </p> */}
-      <Table striped bordered hover className="foodTable border border-dark border-3 rounded text-wrap">
-      <thead className="tableHead bg-danger text-center">
+      {/* <Container fluid className="border rounded p-1"> */}
+      <Table striped bordered hover size="sm" className="foodTable border border-dark border-3 align-middle">
+      <thead className="tableHead bg-dark-subtle ">
           <tr>
             <th className="tableHeader">Food</th>
-            <th className="tableHeader">Where/Recipe?</th>
+            {/* <th className="tableHeader">Where/Recipe?</th> */}
             <th className="tableHeader">Becky Opinion</th>
             {/* <th>Tried</th> */}
             <th className="tableHeader">Who recommends</th>
             <th className="tableHeader">Delete</th>
           </tr>
         </thead>
-        <tfoot className="tableFoot">
+        <tfoot className="tableFoot bg-dark-subtle">
           <tr>
             <th>Food</th>
-            <th>Where/Recipe?</th>
+            {/* <th>Where/Recipe?</th> */}
             <th>Becky Opinion</th>
             {/* <th>Tried</th> */}
             <th>Who recommends</th>
             <th>Delete</th>
           </tr>
         </tfoot>
-        <tbody className="foodTableBody">
+        <tbody className="foodTableBody"
+        >
           {food.map((item, index) => {
             // console.log(item);
             // console.log(item.tried);
@@ -64,6 +68,7 @@ function FoodTable({userBecky, food, foodITried, handleOpinion, deleteFood }) {
           })}
         </tbody>
       </Table>
+      {/* </Container> */}
       <details>
       <table className="foodTable">
         <thead className="tableHead">

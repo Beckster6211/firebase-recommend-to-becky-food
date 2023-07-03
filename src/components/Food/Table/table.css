@@ -1,6 +1,6 @@
 .foodTableComponent{
   overflow: auto;
-  width: 100%;
+  /* width: auto; */
             height: 50vmin;
     /* width: 95%; */
     /* border-style: solid;
@@ -13,7 +13,9 @@
   }
 
   .foodTable{
-    background-color:  #ffff99;
+    background-color: #FFC107; /*bootstrap warning*/
+    table-layout: fixed;
+    word-wrap: break-word;
     /* table-layout: auto; */
     /* width:100%; */
     /* border-collapse: collapse; */
@@ -24,14 +26,14 @@
   .tableHead{
     position: sticky;
     top: 0;
+    font-size: 1.6vw;
+    /* max-width: 100%; */
     /* background-color: grey; */
     /* width: 95%;
    padding: 5%; */
   }
 
   .tableHeader{
-    position: sticky;
-    top: 0;
     /* 
     to try and make the table head sticky
     position: sticky;
@@ -47,11 +49,11 @@
   } */
 
   tr:nth-child(even) {
-    background-color: #FFC107;
+    background-color:#ffff99; /*warning subtle*/
   }
-  tr:hover {
-    background-color:white;
-  }
+  /* tr:hover {
+    background-color: white;
+  } */
 
   /* .tableFoot{
     background-color: blue;

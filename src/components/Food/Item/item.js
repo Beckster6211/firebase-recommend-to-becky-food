@@ -42,15 +42,21 @@ function Item({
     <tr>
       <td>
         <p>{foodItem}</p>
+        <textarea
+          defaultValue={foodRecipe}
+          rows="auto"
+          cols="auto"
+          readOnly
+        ></textarea>
       </td>
-      <td>
+      {/* <td>
         <textarea
           defaultValue={foodRecipe}
           rows="4"
           cols="5"
           readOnly
         ></textarea>
-      </td>
+      </td> */}
       {/* <td>
         <p>{foodRecipe}</p>
       </td> */}
