@@ -27,7 +27,7 @@ function FoodForm({ food, handleChange, submitForm }) {
       <Container fluid className="bg-warning p-2">
         <Card className ="bg-warning-subtle border border-warning-subtle" >
           <Card.Body>
-          <Card.Title>Food Form</Card.Title>
+          {/* <Card.Title>Food Form</Card.Title> */}
 
           <Form className = "bg-warning-subtle p-1" 
           autoComplete="off"

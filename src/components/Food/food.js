@@ -108,9 +108,9 @@ function Food({Becky}) {
         <h4 className = "header">FOOD PAGE</h4>
         <br/>
       </div>
-      <Accordion defaultActiveKey="1" className="p-2 border border-dark border-3 rounded bg-light">
-        <Accordion.Item eventKey="0" className="border border-dark border-3 rounded ">
-          <Accordion.Header className="bg-warning">
+      <Accordion defaultActiveKey={["0"]} alwaysOpen className="p-2 border border-dark border-3 rounded bg-light">
+        <Accordion.Item eventKey="1" className="border border-dark border-3 rounded">
+          <Accordion.Header className="">
             <Container fluid className="fs-4 text-center">
               Food Form
               {/* <h3 >Form for Food</h3> */}
@@ -127,10 +127,15 @@ function Food({Becky}) {
           </Accordion.Body>
         </Accordion.Item>
         <br/>
-        <Accordion.Item eventKey="1">
-          <Accordion.Header>Food Table</Accordion.Header>
+        <Accordion.Item eventKey="0" className="border border-dark border-3 rounded">
+          <Accordion.Header>
+            <Container fluid className="fs-4 text-center">
+              Food Table
+            </Container>
+           {/* <h3>Food Table</h3>  */}
+            </Accordion.Header>
           <Accordion.Body>
-            <div>
+            {/* <div> */}
               <FoodTable
               userBecky={Becky}
               food={food}
@@ -138,7 +143,7 @@ function Food({Becky}) {
               deleteFood={deleteFood}
               handleOpinion={changeOpinion}
             />
-            </div>
+            {/* </div> */}
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>

@@ -1,38 +1,43 @@
 .foodTableComponent{
-    
+  overflow: auto;
+  width: 100%;
+            height: 50vmin;
     /* width: 95%; */
-    border-style: solid;
+    /* border-style: solid;
     border-color: black;
-    border-width: 5px;
+    border-width: 5px; */
     /* padding: 2%; */
-    margin: 1%;
-    background-color: bisque;
+    /* margin: 1%;
+    background-color: bisque; */
     
   }
 
   .foodTable{
-    background-color: aqua;
-    table-layout: auto;
-    width:100%;
-    border-collapse: collapse;
-  overflow-wrap: break-word;
-  hyphens: auto;
+    background-color:  #ffff99;
+    /* table-layout: auto; */
+    /* width:100%; */
+    /* border-collapse: collapse; */
+  /* overflow-wrap: break-word; */
+  /* hyphens: auto; */
   }
 
   .tableHead{
-    background-color: grey;
+    position: sticky;
+    top: 0;
+    /* background-color: grey; */
     /* width: 95%;
    padding: 5%; */
   }
 
   .tableHeader{
-    
+    position: sticky;
+    top: 0;
     /* 
     to try and make the table head sticky
     position: sticky;
     top:0; */
-    background-color: gold;
-    border-style: solid;
+    /* background-color: gold;
+    border-style: solid; */
     /* border-color: magenta; */
     
   }
@@ -42,13 +47,13 @@
   } */
 
   tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #FFC107;
   }
   tr:hover {
-    background-color: #ffff99;
+    background-color:white;
   }
 
-  .tableFoot{
+  /* .tableFoot{
     background-color: blue;
-  }
+  } */
 
