@@ -11,6 +11,7 @@ import ButtonGroup from "react-bootstrap/ButtonGroup"
 import Stack from 'react-bootstrap/Stack'
 import InputGroup from 'react-bootstrap/InputGroup';
 import Form from "react-bootstrap/Form"
+import Badge from "react-bootstrap/Badge"
 
 function Item({
   food,
@@ -118,8 +119,8 @@ function Item({
               type="checkbox" 
               // checked={foodTried}
               
-              className="border border-dark border-2 rounded-circle px-1 bg-dark-subtle"
-              style={{fontSize:"1.3em"}}
+              className="border border-dark border-2 rounded-5 px-2  bg-dark-subtle fs-2"
+              // style={{fontSize:"1.3em"}}
               >
               </Form.Check>
               {/* /////////// */}
@@ -158,7 +159,11 @@ function Item({
           No
           </Button>
         {/* </ButtonGroup> */}
+        <Badge bg="secondary-subtle" 
+        className="border border-dark border-2  rounded-circle fs-3 pb-0 px-2">
         <p>{foodOpinion}</p>
+        </Badge>
+        {/* <p>{foodOpinion}</p> */}
           {/* <br/> */}
         {/* <Button variant="info">
         Reset
