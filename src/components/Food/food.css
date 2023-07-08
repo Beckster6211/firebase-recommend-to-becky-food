@@ -1,8 +1,14 @@
 .foodPage{
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
   /* background-image: url("./il_fullxfull.726795730_km9q.avif"); */
+  background-image: url("./istockphoto-495654239-612x612.jpg");
   border-style: solid;
   padding: 7px;
+}
+
+.foodAcord{
+  /* background-image: url("./istockphoto-495654239-612x612.jpg"); */
+  /* background-image: url("./il_fullxfull.726795730_km9q.avif"); */
 }
 
 .header{

@@ -4,6 +4,14 @@ import "./item.css";
 import React, {useState} from "react"
 import {getAuth, onAuthStateChanged} from "firebase/auth"
 
+import Card from "react-bootstrap/Card"
+import Container from "react-bootstrap/Container"
+import Button from "react-bootstrap/Button"
+import ButtonGroup from "react-bootstrap/ButtonGroup"
+import Stack from 'react-bootstrap/Stack'
+import InputGroup from 'react-bootstrap/InputGroup';
+import Form from "react-bootstrap/Form"
+
 function Item({
   food,
   foodItem,
@@ -40,15 +48,21 @@ function Item({
 
   return (
     <tr>
+      {/* <Card className="border border-dark m-1"> */}
       <td>
+        <Container fluid className="border border-dark" style={{height:"100%"}}>
         <p>{foodItem}</p>
         <textarea
           defaultValue={foodRecipe}
-          rows="auto"
-          cols="auto"
+          style={{width:"80%"}}
+          // rows="3"
+          // cols="6"
+          // max-width="95%"
           readOnly
         ></textarea>
+        </Container>
       </td>
+      {/* </Card> */}
       {/* <td>
         <textarea
           defaultValue={foodRecipe}
@@ -90,8 +104,26 @@ function Item({
       {/* remove the opinion button and only have those displayed to me*/}
       {
         becky === false ?
+        
         <td>
-        <input
+          {/* <Container fluid className="border border-dark" 
+          // style={{display:"flex", flexDirection:"column"}}
+          > */}
+            <Stack gap={2} 
+            className="border border-info d-flex align-items-center" 
+            // style={{width:"100%"}}
+            // style={{display: "flex", alignItems:"center"}}
+            >
+              <Form.Check 
+              type="checkbox" 
+              // checked={foodTried}
+              
+              className="border border-dark border-2 rounded-circle px-1 bg-dark-subtle"
+              style={{fontSize:"1.3em"}}
+              >
+              </Form.Check>
+              {/* /////////// */}
+          {/* <input
           type="checkbox"
           // onChange={() => {
           //   triedIt(food);
@@ -101,9 +133,40 @@ function Item({
           }}
           checked={foodTried}
           readOnly
-        />
-        <br />
-        <button
+         className="foodCheckbox"
+         style={{}}
+        />              */}
+        {/* <ButtonGroup vertical className="border border-dark" style={{}}> */}
+          <Button variant="success"
+          className="" 
+          style={{width:"80%", 
+          // alignContent:"center"
+        }}
+          >
+            Yes
+          </Button>
+          <Button variant="secondary" 
+          className=""
+          style={{width:"80%", alignContent:"center"}}
+          >
+            Alright
+          </Button>
+          <Button variant="danger"
+          className=""
+          style={{width:"80%", alignContent:"center"}}
+          >
+          No
+          </Button>
+        {/* </ButtonGroup> */}
+        <p>{foodOpinion}</p>
+          {/* <br/> */}
+        {/* <Button variant="info">
+        Reset
+        </Button> */}
+        {/* <br/> */}
+        {/* ////////////////////// */}
+        {/* <br/> */}
+        {/* <button
           name="😋"
           // onClick={(event) => {
           //   changeOpinion(food, event);
@@ -114,8 +177,8 @@ function Item({
           readOnly
         >
           Yes
-        </button>
-        <button
+        </button> */}
+        {/* <button
           name="🤫"
           // onClick={(event) => {
           //   changeOpinion(food, event);
@@ -126,8 +189,8 @@ function Item({
           readOnly
         >
           Alright
-        </button>
-        <button
+        </button> */}
+        {/* <button
           name="🤮"
           // onClick={(event) => {
           //   changeOpinion(food, event);
@@ -138,9 +201,9 @@ function Item({
           readOnly
         >
           No
-        </button>
+        </button> */}
         {/* comment this one out once done */}
-        <button
+        {/* <button
           name="🤷‍♀️"
           // onClick={(event) => {
           //   changeOpinion(food, event);
@@ -151,9 +214,16 @@ function Item({
           readOnly
         >
           Reset
-        </button>
-        <p>{foodOpinion}</p>
+        </button> */}
+        {/* <p>{foodOpinion}</p> */}
+        </Stack>
+        <br/>
+        <Button variant="info">
+        Reset
+        </Button>
+        {/* </Container> */}
       </td>
+      
         :
         <td>
         <input

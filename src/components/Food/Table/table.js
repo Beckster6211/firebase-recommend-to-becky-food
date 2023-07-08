@@ -21,7 +21,7 @@ function FoodTable({userBecky, food, foodITried, handleOpinion, deleteFood }) {
         delete from table
       </p> */}
       {/* <Container fluid className="border rounded p-1"> */}
-      <Table striped bordered hover size="sm" className="foodTable border border-dark border-3 align-middle">
+      <Table striped bordered hover className="foodTable border border-dark border-3 align-middle">
       <thead className="tableHead bg-dark-subtle ">
           <tr>
             <th className="tableHeader">Food</th>

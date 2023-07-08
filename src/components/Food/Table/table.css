@@ -26,7 +26,7 @@
   .tableHead{
     position: sticky;
     top: 0;
-    font-size: 1.6vw;
+    /* font-size: 1.6vw; */
     /* max-width: 100%; */
     /* background-color: grey; */
     /* width: 95%;

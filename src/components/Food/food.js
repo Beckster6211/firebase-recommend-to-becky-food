@@ -108,7 +108,7 @@ function Food({Becky}) {
         <h4 className = "header">FOOD PAGE</h4>
         <br/>
       </div>
-      <Accordion defaultActiveKey={["0"]} alwaysOpen className="p-2 border border-dark border-3 rounded bg-light">
+      <Accordion defaultActiveKey={["0"]} alwaysOpen className="foodAcord p-2 border border-dark border-3 rounded bg-light">
         <Accordion.Item eventKey="1" className="border border-dark border-3 rounded">
           <Accordion.Header className="">
             <Container fluid className="fs-4 text-center">
