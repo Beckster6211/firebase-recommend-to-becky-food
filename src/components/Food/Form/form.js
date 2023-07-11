@@ -24,18 +24,24 @@ function FoodForm({ food, handleChange, submitForm }) {
   return (
     <Container fluid className="bg-warning border border-warning border-3 rounded p-1">
       {/* <h6>Form Page</h6> */}
-      <Container fluid className="bg-warning p-2">
-        <Card className ="bg-warning-subtle border border-warning-subtle" >
+      <Container fluid 
+        className="bg-warning p-2">
+        <Card 
+          className ="bg-warning-subtle border border-warning-subtle" >
           <Card.Body>
           {/* <Card.Title>Food Form</Card.Title> */}
 
-          <Form className = "bg-warning-subtle p-1" 
+          <Form 
+            className = "bg-warning-subtle p-1" 
           autoComplete="off"
           onSubmit={(event) => {
             submitForm(event);
-          }}>
+          }}
+            style={{fontSize:"1.6vw"}}
+          >
 
-            <Form.Group className = ""  controlId="formFood"
+            <Form.Group 
+              className = ""  controlId="formFood"
             >
               {/* <Form.Label>Food</Form.Label> */}
               <FloatingLabel controlId = "formFoodItem" label= "Food...">
@@ -78,7 +84,12 @@ function FoodForm({ food, handleChange, submitForm }) {
               </FloatingLabel>
             </Form.Group>
 
-            <Button className="border border-dark border-3 text-dark" variant = "info" type = "submit">Submit/Enjoy</Button>
+            <Button 
+            className="border border-dark border-3 text-dark" variant = "info" type = "submit"
+            style={{fontSize:"1.6vw", width:"auto"}}
+            >
+              Enjoy 
+              </Button>
 
           </Form>
           </Card.Body>

@@ -100,23 +100,44 @@ function Food({Becky}) {
   };
 
   return (
-    <div className="foodPage">
-      <div>
-        <br/>
+    // <div className="foodPage">
+      <Container fluid
+      className="foodPage"
+      style={{}}
+      >
+      <br/>
+      <Container 
+        className=" bg-warning-subtle rounded  w-50 text-center p-0" 
+        style={{fontSize:"3.5vw", fontWeight:"900"}}
+        >
+          <p>
+            FOOD PAGE 
+            <p>
+              🥄🥣☕🍳🧂🥤🍽️
+            </p>
+          </p>         
+      </Container>
+      {/* <div>
+        <br/> */}
         {/* <Nav/> */}
         {/* <h3>Recommend to Becky</h3> */}
-        <h4 className = "header">FOOD PAGE</h4>
-        <br/>
-      </div>
-      <Accordion defaultActiveKey={["0"]} alwaysOpen className="foodAcord p-2 border border-dark border-3 rounded bg-light">
+        {/* <h4 className = "header">FOOD PAGE</h4>
+        
+      </div> */}
+      <br/>
+      <Accordion defaultActiveKey={["0"]} alwaysOpen className="foodAcord p-2 border border-dark border-3 rounded bg-light"
+      style={{}}
+      >
         <Accordion.Item eventKey="1" className="border border-dark border-3 rounded">
           <Accordion.Header className="">
-            <Container fluid className="fs-4 text-center">
+            <Container fluid className="text-center"
+            style={{fontSize:"2.5vw", fontWeight:"700"}}
+            >
               Food Form
               {/* <h3 >Form for Food</h3> */}
               </Container>
            </Accordion.Header>
-          <Accordion.Body className="">
+          <Accordion.Body className="px-2 py-3">
             {/* <div> */}
               <FoodForm
               food={food}
@@ -126,15 +147,22 @@ function Food({Becky}) {
             {/* </div> */}
           </Accordion.Body>
         </Accordion.Item>
+        {/* <br/> */}
         <br/>
-        <Accordion.Item eventKey="0" className="border border-dark border-3 rounded">
+        <Accordion.Item eventKey="0" className="border border-dark border-3 rounded"
+        // style={{height:"70vw"}}
+        >
           <Accordion.Header>
-            <Container fluid className="fs-4 text-center">
+            <Container fluid className="text-center"
+            style={{fontSize:"2.5vw", fontWeight:"700"}}
+            >
               Food Table
             </Container>
            {/* <h3>Food Table</h3>  */}
             </Accordion.Header>
-          <Accordion.Body>
+          <Accordion.Body 
+          className="px-2 py-3"
+          >
             {/* <div> */}
               <FoodTable
               userBecky={Becky}
@@ -142,12 +170,14 @@ function Food({Becky}) {
               foodITried={haveTried}
               deleteFood={deleteFood}
               handleOpinion={changeOpinion}
+              
             />
             {/* </div> */}
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
-    </div>
+      </Container>
+    // </div>
   );
 }
 

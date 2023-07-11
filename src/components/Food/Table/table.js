@@ -9,7 +9,9 @@ import Card from "react-bootstrap/Card"
 function FoodTable({userBecky, food, foodITried, handleOpinion, deleteFood }) {
   // console.log(food);
   return (
-    <div className="foodTableComponent ">
+    <Container fluid className="foodTableComponent p-0"
+    // style={{height:"55vw"}}
+    >
       {/* <h6>Food Table</h6> */}
       {/* <p>
         food item <br />
@@ -21,15 +23,28 @@ function FoodTable({userBecky, food, foodITried, handleOpinion, deleteFood }) {
         delete from table
       </p> */}
       {/* <Container fluid className="border rounded p-1"> */}
-      <Table striped bordered hover className="foodTable border border-dark border-3 align-middle">
-      <thead className="tableHead bg-dark-subtle ">
+      <Table striped bordered hover className="foodTable border border-dark border-4 table-fixed"
+      // style={{width:""}}
+      >
+      <thead className="tableHead bg-dark-subtle "
+      style={{verticalAlign:"middle", fontSize:"1.6vw"}}
+      >
           <tr>
-            <th className="tableHeader">Food</th>
+            <th 
+            className="tableHeader"
+            style={{fontWeight:"500"}}
+            >Food</th>
             {/* <th className="tableHeader">Where/Recipe?</th> */}
-            <th className="tableHeader">Becky Opinion</th>
+            <th className="tableHeader"
+            style={{fontWeight:"500"}}
+            >Becky Opinion</th>
             {/* <th>Tried</th> */}
-            <th className="tableHeader">Who recommends</th>
-            <th className="tableHeader">Delete</th>
+            <th className="tableHeader"
+            style={{fontWeight:"500"}}
+            >Who recommends</th>
+            <th className="tableHeader"
+            style={{fontWeight:"500"}}
+            >Delete</th>
           </tr>
         </thead>
         <tfoot className="tableFoot bg-dark-subtle">
@@ -71,9 +86,13 @@ function FoodTable({userBecky, food, foodITried, handleOpinion, deleteFood }) {
       {/* </Container> */}
       <details>
       <table className="foodTable">
-        <thead className="tableHead">
+        <thead className="tableHead"
+        
+        >
           <tr>
-            <th className="tableHeader">Food</th>
+            <th className="tableHeader"
+            
+            >Food</th>
             <th className="tableHeader">Where/Recipe?</th>
             <th className="tableHeader">Becky Opinion</th>
             {/* <th>Tried</th> */}
@@ -117,7 +136,7 @@ function FoodTable({userBecky, food, foodITried, handleOpinion, deleteFood }) {
         </tbody>
       </table>
       </details>
-    </div>
+    </Container>
   );
 }
 

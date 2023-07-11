@@ -49,32 +49,19 @@ function Item({
 
   return (
     <tr>
-      {/* <Card className="border border-dark m-1"> */}
-      <td>
-        <Container fluid className="border border-dark" style={{height:"100%"}}>
-        <p>{foodItem}</p>
+        <td>
+          <p>{foodItem}</p>
         <textarea
           defaultValue={foodRecipe}
-          style={{width:"80%"}}
           // rows="3"
           // cols="6"
           // max-width="95%"
           readOnly
         ></textarea>
-        </Container>
-      </td>
-      {/* </Card> */}
-      {/* <td>
-        <textarea
-          defaultValue={foodRecipe}
-          rows="4"
-          cols="5"
-          readOnly
-        ></textarea>
-      </td> */}
-      {/* <td>
+        </td>
+        {/* <td>
         <p>{foodRecipe}</p>
-      </td> */}
+        </td> */}
       {/* {
         isBecky === false ?
         <td>
@@ -107,24 +94,7 @@ function Item({
         becky === false ?
         
         <td>
-          {/* <Container fluid className="border border-dark" 
-          // style={{display:"flex", flexDirection:"column"}}
-          > */}
-            <Stack gap={2} 
-            className="border border-info d-flex align-items-center" 
-            // style={{width:"100%"}}
-            // style={{display: "flex", alignItems:"center"}}
-            >
-              <Form.Check 
-              type="checkbox" 
-              // checked={foodTried}
-              
-              className="border border-dark border-2 rounded-5 px-2  bg-dark-subtle fs-2"
-              // style={{fontSize:"1.3em"}}
-              >
-              </Form.Check>
-              {/* /////////// */}
-          {/* <input
+          <input
           type="checkbox"
           // onChange={() => {
           //   triedIt(food);
@@ -136,42 +106,9 @@ function Item({
           readOnly
          className="foodCheckbox"
          style={{}}
-        />              */}
-        {/* <ButtonGroup vertical className="border border-dark" style={{}}> */}
-          <Button variant="success"
-          className="" 
-          style={{width:"80%", 
-          // alignContent:"center"
-        }}
-          >
-            Yes
-          </Button>
-          <Button variant="secondary" 
-          className=""
-          style={{width:"80%", alignContent:"center"}}
-          >
-            Alright
-          </Button>
-          <Button variant="danger"
-          className=""
-          style={{width:"80%", alignContent:"center"}}
-          >
-          No
-          </Button>
-        {/* </ButtonGroup> */}
-        <Badge bg="secondary-subtle" 
-        className="border border-dark border-2  rounded-circle fs-3 pb-0 px-2">
-        <p>{foodOpinion}</p>
-        </Badge>
-        {/* <p>{foodOpinion}</p> */}
-          {/* <br/> */}
-        {/* <Button variant="info">
-        Reset
-        </Button> */}
-        {/* <br/> */}
-        {/* ////////////////////// */}
-        {/* <br/> */}
-        {/* <button
+        /> 
+        <br/>
+           <button
           name="😋"
           // onClick={(event) => {
           //   changeOpinion(food, event);
@@ -182,8 +119,8 @@ function Item({
           readOnly
         >
           Yes
-        </button> */}
-        {/* <button
+        </button>
+        <button
           name="🤫"
           // onClick={(event) => {
           //   changeOpinion(food, event);
@@ -194,8 +131,8 @@ function Item({
           readOnly
         >
           Alright
-        </button> */}
-        {/* <button
+        </button>
+        <button
           name="🤮"
           // onClick={(event) => {
           //   changeOpinion(food, event);
@@ -206,9 +143,8 @@ function Item({
           readOnly
         >
           No
-        </button> */}
-        {/* comment this one out once done */}
-        {/* <button
+        </button>
+        <button
           name="🤷‍♀️"
           // onClick={(event) => {
           //   changeOpinion(food, event);
@@ -219,14 +155,8 @@ function Item({
           readOnly
         >
           Reset
-        </button> */}
-        {/* <p>{foodOpinion}</p> */}
-        </Stack>
-        <br/>
-        <Button variant="info">
-        Reset
-        </Button>
-        {/* </Container> */}
+        </button>
+        <p>{foodOpinion}</p>
       </td>
       
         :
@@ -329,6 +259,8 @@ function Item({
       <td>
         <p>{foodRecommend}</p>
       </td>
+
+
       <td>
         <button
           onClick={() => {
