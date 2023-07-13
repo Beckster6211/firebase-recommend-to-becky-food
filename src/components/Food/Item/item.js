@@ -61,14 +61,14 @@ function Item({
           }}
           > */}
             <p 
-            className="bg-light border border-light rounded"
+            className="bg-light border border-dark border-2 rounded p-1"
             style={{
               fontSize:"1.6vw",
               // border:"solid black 2px"
             }}
             >{foodItem}</p>
             <Form.Control 
-            className="border border-light border-2 p-0"
+            className="border border-dark border-2 p-1"
             as="textarea"
             defaultValue={foodRecipe} 
             readOnly 
@@ -176,7 +176,7 @@ function Item({
             }}
             > */}
               <Button variant="success"
-              className="border border-2 border-success rounded"
+              className="border border-2 border-dark rounded"
               style={{
                 fontSize:"2vw"
               }}
@@ -192,7 +192,7 @@ function Item({
           😋          
         </Button>
         <Button variant="secondary"
-        className="border border-secondary border-2 rounded"
+        className="border border-dark border-2 rounded"
         style={{
           fontSize:"2vw"
         }}
@@ -208,7 +208,7 @@ function Item({
           🤫
         </Button>
         <Button variant = "danger"
-        className="border border-danger border-2 rounded"
+        className="border border-dark border-2 rounded"
         style={{
           fontSize:"2vw"
         }}
@@ -268,7 +268,7 @@ function Item({
         {/* </ButtonGroup> */}
         </Stack>
         <p
-        className="p-1 mb-0"
+        className="p-1 mx-1 mb-0 border border-dark border-2 rounded bg-light"
         style={{
           fontSize:"2.5vw",
           // border:"solid black 2px",
@@ -457,19 +457,19 @@ function Item({
       style={{
       }}
       >
-        <Container fluid 
+        {/* <Container fluid 
           className="bg-light rounded p-1"
           style={{
             
           }}
-          >
+          > */}
         <p
-        className=""
+        className="p-1 bg-light border border-dark border-2 rounded"
         style={{
           fontSize:"1.6vw"
         }}
         >{foodRecommend}</p>
-        </Container>
+        {/* </Container> */}
       </td>
 
 
@@ -484,6 +484,19 @@ function Item({
             
           }}
           > */}
+          <Button variant="light"
+          className="border border-dark border-2"
+          style={{
+            fontSize:"2.5vw"
+          }}
+          onClick={() => {
+            // console.log("delete button clicked");
+            removeFood(foodId);
+          }}>
+          🗑️
+          </Button>
+        {/* 
+        /////////
         <button
           onClick={() => {
             // console.log("delete button clicked");
@@ -491,7 +504,9 @@ function Item({
           }}
         >
           🗑️
-        </button>
+        </button> 
+        /////////
+        */}
         {/* </Container> */}
       </td>
     </tr>
