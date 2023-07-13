@@ -49,7 +49,50 @@ function Item({
 
   return (
     <tr>
-        <td>
+      <td 
+      className="p-2 align-middle"
+      style={{
+      }}
+      >
+          {/* <Container fluid 
+          className="bg-light rounded p-1"
+          style={{
+           
+          }}
+          > */}
+            <p 
+            className="bg-light border border-light rounded"
+            style={{
+              fontSize:"1.6vw",
+              // border:"solid black 2px"
+            }}
+            >{foodItem}</p>
+            <Form.Control 
+            className="border border-light border-2 p-0"
+            as="textarea"
+            defaultValue={foodRecipe} 
+            readOnly 
+            style={{
+              fontSize:"1.5vw",
+              height:"10vw"          
+            }}
+            />
+            {/* 
+            ////////////
+            <textarea
+            defaultValue={foodRecipe}
+            // rows="3"
+            // cols="6"
+            // max-width="95%"
+            readOnly
+            ></textarea> 
+            ////////////
+            */}
+          {/* </Container> */}
+      </td>
+        {/*
+        /////////////////////////////
+         <td>
           <p>{foodItem}</p>
         <textarea
           defaultValue={foodRecipe}
@@ -58,7 +101,9 @@ function Item({
           // max-width="95%"
           readOnly
         ></textarea>
-        </td>
+        </td> 
+        /////////////////////////////////////
+        */}
         {/* <td>
         <p>{foodRecipe}</p>
         </td> */}
@@ -93,7 +138,146 @@ function Item({
       {
         becky === false ?
         
-        <td>
+        <td
+        className="p-2 align-middle"
+      style={{
+      }}
+        >
+          {/* <Container fluid 
+          className="bg-light rounded p-2"
+          style={{
+            
+          }}
+          > */}
+            <input
+            className="foodCheckbox"
+            style={{
+              width:"3vw",
+              height:"3vw",
+              
+            }}
+            type="checkbox"
+            onChange = {()=>{
+            console.log("not for you")
+            }}
+            checked={foodTried}
+            readOnly
+        /> 
+            <Stack gap={1} 
+            className="p-1"
+            style={{
+              // border:"solid black 3px"
+            }}
+            >
+            {/* <ButtonGroup vertical
+            className=""
+            style={{
+              border:"solid 2px black"
+            }}
+            > */}
+              <Button variant="success"
+              className="border border-2 border-success rounded"
+              style={{
+                fontSize:"2vw"
+              }}
+          name="😋"
+          // onClick={(event) => {
+          //   changeOpinion(food, event);
+          // }}
+          onChange = {()=>{
+            console.log("not for you")
+          }}
+          readOnly
+        >
+          😋          
+        </Button>
+        <Button variant="secondary"
+        className="border border-secondary border-2 rounded"
+        style={{
+          fontSize:"2vw"
+        }}
+          name="🤫"
+          // onClick={(event) => {
+          //   changeOpinion(food, event);
+          // }}
+          onChange = {()=>{
+            console.log("not for you")
+          }}
+          readOnly
+        >
+          🤫
+        </Button>
+        <Button variant = "danger"
+        className="border border-danger border-2 rounded"
+        style={{
+          fontSize:"2vw"
+        }}
+          name="🤮"
+          // onClick={(event) => {
+          //   changeOpinion(food, event);
+          // }}
+          onChange = {()=>{
+            console.log("not for you")
+          }}
+          readOnly
+        >
+          🤮
+        </Button>
+           {/* 
+           //////////
+           <button
+          name="😋"
+          // onClick={(event) => {
+          //   changeOpinion(food, event);
+          // }}
+          onChange = {()=>{
+            console.log("not for you")
+          }}
+          readOnly
+        >
+          Yes/😋
+        </button> 
+        
+        <button
+          name="🤫"
+          // onClick={(event) => {
+          //   changeOpinion(food, event);
+          // }}
+          onChange = {()=>{
+            console.log("not for you")
+          }}
+          readOnly
+        >
+          Alright/🤫
+        </button>
+        
+        <button
+          name="🤮"
+          // onClick={(event) => {
+          //   changeOpinion(food, event);
+          // }}
+          onChange = {()=>{
+            console.log("not for you")
+          }}
+          readOnly
+        >
+          No/🤮
+        </button>
+        /////////
+        */}
+        {/* </ButtonGroup> */}
+        </Stack>
+        <p
+        className="p-1 mb-0"
+        style={{
+          fontSize:"2.5vw",
+          // border:"solid black 2px",
+          // borderRadius:"4px"
+        }}
+        >{foodOpinion}</p>
+          {/* </Container> */}
+          {/* 
+          //////////
           <input
           type="checkbox"
           // onChange={() => {
@@ -106,7 +290,8 @@ function Item({
           readOnly
          className="foodCheckbox"
          style={{}}
-        /> 
+        />  
+        
         <br/>
            <button
           name="😋"
@@ -120,6 +305,7 @@ function Item({
         >
           Yes
         </button>
+        
         <button
           name="🤫"
           // onClick={(event) => {
@@ -144,6 +330,10 @@ function Item({
         >
           No
         </button>
+        ///////////
+        */}
+        {/* 
+        /////////
         <button
           name="🤷‍♀️"
           // onClick={(event) => {
@@ -156,7 +346,13 @@ function Item({
         >
           Reset
         </button>
-        <p>{foodOpinion}</p>
+        /////////
+         */}
+        {/* 
+        //////////
+        <p>{foodOpinion}</p> 
+        /////////
+        */}
       </td>
       
         :
@@ -256,12 +452,38 @@ function Item({
       {/* <td>
         <p>{foodTried}</p>
       </td> */}
-      <td>
-        <p>{foodRecommend}</p>
+      <td
+      className="p-2 align-middle"
+      style={{
+      }}
+      >
+        <Container fluid 
+          className="bg-light rounded p-1"
+          style={{
+            
+          }}
+          >
+        <p
+        className=""
+        style={{
+          fontSize:"1.6vw"
+        }}
+        >{foodRecommend}</p>
+        </Container>
       </td>
 
 
-      <td>
+      <td
+      className="p-2 align-middle"
+      style={{
+      }}
+      >
+        {/* <Container fluid 
+          className="bg-light rounded p-1"
+          style={{
+            
+          }}
+          > */}
         <button
           onClick={() => {
             // console.log("delete button clicked");
@@ -270,6 +492,7 @@ function Item({
         >
           🗑️
         </button>
+        {/* </Container> */}
       </td>
     </tr>
   );

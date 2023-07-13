@@ -110,12 +110,11 @@ function Food({Becky}) {
         className=" bg-warning-subtle rounded  w-50 text-center p-0" 
         style={{fontSize:"3.5vw", fontWeight:"900"}}
         >
-          <p>
+          
             FOOD PAGE 
             <p>
               🥄🥣☕🍳🧂🥤🍽️
-            </p>
-          </p>         
+            </p>        
       </Container>
       {/* <div>
         <br/> */}

@@ -88,7 +88,7 @@ function FoodForm({ food, handleChange, submitForm }) {
             className="border border-dark border-3 text-dark" variant = "info" type = "submit"
             style={{fontSize:"1.6vw", width:"auto"}}
             >
-              Enjoy 
+              😄 Enjoy 😄
               </Button>
 
           </Form>

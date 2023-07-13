@@ -12,42 +12,33 @@ function FoodTable({userBecky, food, foodITried, handleOpinion, deleteFood }) {
     <Container fluid className="foodTableComponent p-0"
     // style={{height:"55vw"}}
     >
-      {/* <h6>Food Table</h6> */}
-      {/* <p>
-        food item <br />
-        recipe <br />
-        tried <br />
-        opinion <br />
-        (could roll tried and opinion into one column) <br />
-        who recommend <br />
-        delete from table
-      </p> */}
       {/* <Container fluid className="border rounded p-1"> */}
       <Table striped bordered hover className="foodTable border border-dark border-4 table-fixed"
       // style={{width:""}}
       >
       <thead className="tableHead bg-dark-subtle "
-      style={{verticalAlign:"middle", fontSize:"1.6vw"}}
+      style={{verticalAlign:"middle", fontSize:"2vw", fontWeight:"500"}}
       >
           <tr>
             <th 
             className="tableHeader"
-            style={{fontWeight:"500"}}
+            // style={{fontWeight:"500"}}
             >Food</th>
             {/* <th className="tableHeader">Where/Recipe?</th> */}
             <th className="tableHeader"
-            style={{fontWeight:"500"}}
+            // style={{fontWeight:"500"}}
             >Becky Opinion</th>
             {/* <th>Tried</th> */}
             <th className="tableHeader"
-            style={{fontWeight:"500"}}
+            // style={{fontWeight:"500"}}
             >Who recommends</th>
             <th className="tableHeader"
-            style={{fontWeight:"500"}}
+            // style={{fontWeight:"500"}}
             >Delete</th>
           </tr>
         </thead>
-        <tfoot className="tableFoot bg-dark-subtle">
+        <tfoot className="tableFoot bg-dark-subtle "
+      style={{verticalAlign:"middle", fontSize:"2vw", fontWeight:"500"}}>
           <tr>
             <th>Food</th>
             {/* <th>Where/Recipe?</th> */}
@@ -58,6 +49,7 @@ function FoodTable({userBecky, food, foodITried, handleOpinion, deleteFood }) {
           </tr>
         </tfoot>
         <tbody className="foodTableBody"
+        style={{fontSize:"1.7vw", verticalAlign:""}}
         >
           {food.map((item, index) => {
             // console.log(item);
