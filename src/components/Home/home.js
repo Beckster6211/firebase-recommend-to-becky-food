@@ -16,7 +16,13 @@ function Home(){
   
 
     return (
-        <div className = "homePage" style={{border:"solid", margin: "5px", background: "brown"}}>
+        <div 
+        className = "homePage" 
+        style={{
+          border:"solid", 
+          margin: "5px", 
+          background: "brown"
+          }}>
             {/* <Nav/> */}
            
             <br/>

@@ -9,12 +9,16 @@ import Card from "react-bootstrap/Card"
 function FoodTable({userBecky, food, foodITried, handleOpinion, deleteFood }) {
   // console.log(food);
   return (
-    <Container fluid 
+    <Container 
+    fluid 
     className="foodTableComponent p-0"
     // style={{height:"55vw"}}
     >
       {/* <Container fluid className="border rounded p-1"> */}
-      <Table striped bordered hover 
+      <Table 
+      striped 
+      bordered 
+      hover 
       className="foodTable border border-dark border-4 table-fixed"
       // style={{width:""}}
       >

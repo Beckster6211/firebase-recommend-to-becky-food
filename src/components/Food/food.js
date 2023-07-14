@@ -101,7 +101,8 @@ function Food({Becky}) {
 
   return (
     // <div className="foodPage">
-      <Container fluid
+      <Container 
+      fluid
       className="foodPage"
       style={{}}
       >
@@ -109,13 +110,11 @@ function Food({Becky}) {
       <Container 
         className=" bg-warning-subtle rounded  w-50 text-center p-0" 
         style={{
-          fontSize:"3vw", fontWeight:"900"
+          fontSize:"3vw", 
+          fontWeight:"900"
         }}
         >
-            FOOD PAGE 
-            <p>
-              🥄🥣☕🍳🧂🥤🍽️
-            </p>        
+            🥄🥣☕ &nbsp;&nbsp;FOOD PAGE&nbsp;&nbsp;🧂🥤🍽️
       </Container>
       {/* <div>
         <br/> */}
@@ -125,19 +124,24 @@ function Food({Becky}) {
         
       </div> */}
       <br/>
-      <Accordion defaultActiveKey={["0"]} alwaysOpen
+      <Accordion 
+      defaultActiveKey={["0"]} 
+      alwaysOpen
       className="foodAcord p-2 border border-dark border-3 rounded bg-light"
       style={{
       }}
       >
-        <Accordion.Item eventKey="1" 
+        <Accordion.Item 
+        eventKey="1" 
         className="border border-dark border-3 rounded">
           <Accordion.Header 
           className="">
-            <Container fluid 
+            <Container 
+            fluid 
             className="text-center"
             style={{
-              fontSize:"2.5vw", fontWeight:"700"
+              fontSize:"2.5vw", 
+              fontWeight:"700"
             }}
             >
               Food Form
@@ -157,15 +161,18 @@ function Food({Becky}) {
         </Accordion.Item>
         {/* <br/> */}
         <br/>
-        <Accordion.Item eventKey="0" 
+        <Accordion.Item 
+        eventKey="0" 
         className="border border-dark border-3 rounded"
         // style={{height:"70vw"}}
         >
           <Accordion.Header>
-            <Container fluid 
+            <Container 
+            fluid 
             className="text-center"
             style={{
-              fontSize:"2.5vw", fontWeight:"700"
+              fontSize:"2.5vw", 
+              fontWeight:"700"
             }}
             >
               Food Table

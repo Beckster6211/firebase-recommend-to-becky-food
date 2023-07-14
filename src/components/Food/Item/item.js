@@ -149,7 +149,12 @@ function Item({
             
           }}
           > */}
-            <input
+          
+        <Stack 
+        direction="horizontal"
+        className="justify-content-evenly"
+        >
+          <input
             className="foodCheckbox"
             style={{
               width:"3vw",
@@ -163,7 +168,41 @@ function Item({
             checked={foodTried}
             readOnly
         /> 
-            <Stack gap={1} 
+          <p
+        className="p-1 mx-1 mb-0 border border-dark border-2 rounded bg-light"
+        style={{
+          fontSize:"2.2vw",
+          
+          // border:"solid black 2px",
+          // borderRadius:"4px"
+        }}
+        >{foodOpinion}</p>
+        </Stack>
+            {/* <input
+            className="foodCheckbox"
+            style={{
+              width:"3vw",
+              height:"3vw",
+              
+            }}
+            type="checkbox"
+            onChange = {()=>{
+            console.log("not for you")
+            }}
+            checked={foodTried}
+            readOnly
+        /> 
+<p
+        className="p-1 mx-1 mb-0 border border-dark border-2 rounded bg-light w-25"
+        style={{
+          fontSize:"2.5vw",
+          
+          // border:"solid black 2px",
+          // borderRadius:"4px"
+        }}
+        >{foodOpinion}</p> */}
+            <Stack 
+            gap={1} 
             className="p-1"
             style={{
               // border:"solid black 3px"
@@ -175,7 +214,8 @@ function Item({
               border:"solid 2px black"
             }}
             > */}
-              <Button variant="success"
+              <Button 
+              variant="success"
               className="border border-2 border-dark rounded"
               style={{
                 fontSize:"2vw"
@@ -191,7 +231,8 @@ function Item({
         >
           😋          
         </Button>
-        <Button variant="secondary"
+        <Button 
+        variant="secondary"
         className="border border-dark border-2 rounded"
         style={{
           fontSize:"2vw"
@@ -207,7 +248,8 @@ function Item({
         >
           🤫
         </Button>
-        <Button variant = "danger"
+        <Button 
+        variant = "danger"
         className="border border-dark border-2 rounded"
         style={{
           fontSize:"2vw"
@@ -267,14 +309,15 @@ function Item({
         */}
         {/* </ButtonGroup> */}
         </Stack>
-        <p
-        className="p-1 mx-1 mb-0 border border-dark border-2 rounded bg-light"
+        {/* <p
+        className="p-1 mx-1 mb-0 border border-dark border-2 rounded bg-light w-50"
         style={{
           fontSize:"2.5vw",
+          
           // border:"solid black 2px",
           // borderRadius:"4px"
         }}
-        >{foodOpinion}</p>
+        >{foodOpinion}</p> */}
           {/* </Container> */}
           {/* 
           //////////
@@ -361,7 +404,10 @@ function Item({
       style={{
       }}
         >
-        <input
+          <Stack 
+        direction="horizontal"
+        className="justify-content-evenly"
+        ><input
         className="foodCheckbox"
         style={{
           width:"3vw",
@@ -375,13 +421,25 @@ function Item({
           checked={foodTried}
           // readOnly
         />
-       <Stack gap={1} 
+        <p
+        className="p-1 mx-1 mb-0 border border-dark border-2 rounded bg-light"
+        style={{
+          fontSize:"2.2vw",
+          // border:"solid black 2px",
+          // borderRadius:"4px"
+        }}
+        >{foodOpinion}</p>
+        </Stack>
+        
+       <Stack 
+       gap={1} 
             className="p-1"
             style={{
               // border:"solid black 3px"
             }}
             >
-             <Button variant="success"
+             <Button 
+             variant="success"
               className="border border-2 border-dark rounded"
               style={{
                 fontSize:"2vw"
@@ -397,7 +455,8 @@ function Item({
         >
           😋          
         </Button> 
-        <Button variant="secondary"
+        <Button 
+        variant="secondary"
         className="border border-dark border-2 rounded"
         style={{
           fontSize:"2vw"
@@ -412,7 +471,8 @@ function Item({
         >
           🤫
         </Button>
-        <Button variant = "danger"
+        <Button 
+        variant = "danger"
         className="border border-dark border-2 rounded"
         style={{
           fontSize:"2vw"
@@ -461,14 +521,14 @@ function Item({
         >
           Reset
         </button> */}
-        <p
+        {/* <p
         className="p-1 mx-1 mb-0 border border-dark border-2 rounded bg-light"
         style={{
           fontSize:"2.5vw",
           // border:"solid black 2px",
           // borderRadius:"4px"
         }}
-        >{foodOpinion}</p>
+        >{foodOpinion}</p> */}
       </td>
       }
       {/*
@@ -553,7 +613,8 @@ function Item({
             
           }}
           > */}
-          <Button variant="light"
+          <Button 
+          variant="light"
           className="border border-dark border-2"
           style={{
             fontSize:"2.5vw"

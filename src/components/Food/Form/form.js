@@ -22,9 +22,12 @@ import Button from "react-bootstrap/button"
 
 function FoodForm({ food, handleChange, submitForm }) {
   return (
-    <Container fluid className="bg-warning border border-warning border-3 rounded p-1">
+    <Container 
+    fluid 
+    className="bg-warning border border-warning border-3 rounded p-1">
       {/* <h6>Form Page</h6> */}
-      <Container fluid 
+      <Container 
+      fluid 
         className="bg-warning p-2">
         <Card 
           className ="bg-warning-subtle border border-warning-subtle" >
@@ -37,15 +40,31 @@ function FoodForm({ food, handleChange, submitForm }) {
           onSubmit={(event) => {
             submitForm(event);
           }}
-            style={{fontSize:"1.6vw"}}
+            style={{
+              fontSize:"1.6vw"
+            }}
           >
 
             <Form.Group 
-              className = ""  controlId="formFood"
+              className = ""  
+              controlId="formFood"
             >
               {/* <Form.Label>Food</Form.Label> */}
-              <FloatingLabel controlId = "formFoodItem" label= "Food...">
-                <Form.Control className="text-break border border-dark border-3" type="text" placeholder = "Food..." 
+              <FloatingLabel 
+              className=""
+              style={{
+                fontSize:"1.2vw"
+              }}
+              controlId = "formFoodItem" 
+              label= "Food...">
+                <Form.Control 
+                className="text-break border border-dark
+               border-3"
+               style={{
+                fontSize:"1.4vw"
+              }} 
+                type="text"
+                placeholder = "Food..." 
                 name="formFoodItem"
                 // id="formFoodItem"
                 // type="text"
@@ -56,10 +75,24 @@ function FoodForm({ food, handleChange, submitForm }) {
               </FloatingLabel>
             </Form.Group>
 
-            <Form.Group className="pt-2">
+            <Form.Group 
+            className="pt-2">
               {/* <Form.Label>Recipe</Form.Label> */}
-              <FloatingLabel controlId = "formFoodRecipe" label= "Recipe/Ingredients...">
-                <Form.Control className="border border-dark border-3" as = "textarea" style = {{height:"110px"}} placeholder = "Recipe/Ingredients..."
+              <FloatingLabel 
+              style={{
+                fontSize:"1.2vw"
+              }}
+              controlId = "formFoodRecipe" 
+              label= "Recipe/Where...">
+                <Form.Control 
+                className="border border-dark border-3" 
+                
+                as = "textarea" 
+                style = {{
+                  height:"110px",
+                  fontSize:"1.4vw"
+                }} 
+                placeholder = "Recipe/Where..."
                 name="formFoodRecipe"
                 // id="formFoodRecipe"
                 // type="text"
@@ -70,10 +103,22 @@ function FoodForm({ food, handleChange, submitForm }) {
               </FloatingLabel>
             </Form.Group>
 
-            <Form.Group className="py-2" controlId="formFoodRecommend">
+            <Form.Group 
+            className="py-2" 
+            controlId="formFoodRecommend">
               {/* <Form.Label>Recommended By</Form.Label> */}
-              <FloatingLabel controlId = "formFoodRecommend" label="Recommended By..." >
-                <Form.Control className="border border-dark border-3" type="text" placeholder="Recommended By..."
+              <FloatingLabel 
+              style={{
+                fontSize:"1.2vw"
+              }}
+              controlId = "formFoodRecommend" label="Recommended By..." >
+                <Form.Control 
+                className="border border-dark border-3"
+                style={{
+                  fontSize:"1.4vw"
+                }} 
+                type="text" 
+                placeholder="Recommended By..."
                 name="formFoodRecommend"
                 // id="formFoodRecommend"
                 // type="text"
@@ -85,8 +130,13 @@ function FoodForm({ food, handleChange, submitForm }) {
             </Form.Group>
 
             <Button 
-            className="border border-dark border-3 text-dark" variant = "info" type = "submit"
-            style={{fontSize:"1.6vw", width:"auto"}}
+            variant = "info"
+            className="border border-dark border-3 text-dark"  
+            type = "submit"
+            style={{
+              fontSize:"1.6vw", 
+              width:"auto"
+            }}
             >
               😄 Enjoy 😄
               </Button>
