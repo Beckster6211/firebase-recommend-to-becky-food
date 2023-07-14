@@ -9,15 +9,22 @@ import Card from "react-bootstrap/Card"
 function FoodTable({userBecky, food, foodITried, handleOpinion, deleteFood }) {
   // console.log(food);
   return (
-    <Container fluid className="foodTableComponent p-0"
+    <Container fluid 
+    className="foodTableComponent p-0"
     // style={{height:"55vw"}}
     >
       {/* <Container fluid className="border rounded p-1"> */}
-      <Table striped bordered hover className="foodTable border border-dark border-4 table-fixed"
+      <Table striped bordered hover 
+      className="foodTable border border-dark border-4 table-fixed"
       // style={{width:""}}
       >
-      <thead className="tableHead bg-dark-subtle "
-      style={{verticalAlign:"middle", fontSize:"2vw", fontWeight:"500"}}
+      <thead 
+      className="tableHead bg-dark-subtle "
+      style={{
+        verticalAlign:"middle", 
+        fontSize:"2vw", 
+        fontWeight:"500"
+      }}
       >
           <tr>
             <th 
@@ -25,20 +32,28 @@ function FoodTable({userBecky, food, foodITried, handleOpinion, deleteFood }) {
             // style={{fontWeight:"500"}}
             >Food</th>
             {/* <th className="tableHeader">Where/Recipe?</th> */}
-            <th className="tableHeader"
+            <th 
+            className="tableHeader"
             // style={{fontWeight:"500"}}
             >Becky Opinion</th>
             {/* <th>Tried</th> */}
-            <th className="tableHeader"
+            <th 
+            className="tableHeader"
             // style={{fontWeight:"500"}}
             >Who recommends</th>
-            <th className="tableHeader"
+            <th 
+            className="tableHeader"
             // style={{fontWeight:"500"}}
             >Delete</th>
           </tr>
         </thead>
-        <tfoot className="tableFoot bg-dark-subtle "
-      style={{verticalAlign:"middle", fontSize:"2vw", fontWeight:"500"}}>
+        <tfoot 
+        className="tableFoot bg-dark-subtle "
+        style={{
+          verticalAlign:"middle", 
+          fontSize:"2vw", 
+          fontWeight:"500"
+          }}>
           <tr>
             <th>Food</th>
             {/* <th>Where/Recipe?</th> */}
@@ -48,8 +63,12 @@ function FoodTable({userBecky, food, foodITried, handleOpinion, deleteFood }) {
             <th>Delete</th>
           </tr>
         </tfoot>
-        <tbody className="foodTableBody"
-        style={{fontSize:"1.7vw", verticalAlign:""}}
+        <tbody 
+        className="foodTableBody"
+        style={{
+          fontSize:"1.7vw", 
+          // verticalAlign:""
+        }}
         >
           {food.map((item, index) => {
             // console.log(item);
@@ -76,7 +95,8 @@ function FoodTable({userBecky, food, foodITried, handleOpinion, deleteFood }) {
         </tbody>
       </Table>
       {/* </Container> */}
-      <details>
+      {/* /////////////////////// */}
+      {/* <details>
       <table className="foodTable">
         <thead className="tableHead"
         
@@ -86,9 +106,9 @@ function FoodTable({userBecky, food, foodITried, handleOpinion, deleteFood }) {
             
             >Food</th>
             <th className="tableHeader">Where/Recipe?</th>
-            <th className="tableHeader">Becky Opinion</th>
+            <th className="tableHeader">Becky Opinion</th> */}
             {/* <th>Tried</th> */}
-            <th className="tableHeader">Who recommends</th>
+            {/* <th className="tableHeader">Who recommends</th>
             <th className="tableHeader">Delete</th>
           </tr>
         </thead>
@@ -96,9 +116,9 @@ function FoodTable({userBecky, food, foodITried, handleOpinion, deleteFood }) {
           <tr>
             <th>Food</th>
             <th>Where/Recipe?</th>
-            <th>Becky Opinion</th>
+            <th>Becky Opinion</th> */}
             {/* <th>Tried</th> */}
-            <th>Who recommends</th>
+            {/* <th>Who recommends</th>
             <th>Delete</th>
           </tr>
         </tfoot>
@@ -127,7 +147,8 @@ function FoodTable({userBecky, food, foodITried, handleOpinion, deleteFood }) {
           })}
         </tbody>
       </table>
-      </details>
+      </details> */}
+      {/* /////////////////////// */}
     </Container>
   );
 }

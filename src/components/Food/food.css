@@ -4,7 +4,7 @@
   background-image: url("./istockphoto-495654239-612x612.jpg");
   /* border-style: solid; */
   /* padding: 7px; */
-  min-height: 100vh
+  min-height: 78vh
 }
 
 .foodAcord{
@@ -12,12 +12,12 @@
   /* background-image: url("./il_fullxfull.726795730_km9q.avif"); */
 }
 
-.header{
+/* .header{ */
   /* background-image: url("./il_fullxfull.726795730_km9q.avif"); */
-  background-color: bisque;
+  /* background-color: bisque;
   font-weight: 900;
   width: 30%;
   display:block;
   margin-left: auto;
   margin-right: auto;
-}
+} */

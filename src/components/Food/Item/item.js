@@ -356,8 +356,18 @@ function Item({
       </td>
       
         :
-        <td>
+        <td
+        className="p-2 align-middle"
+      style={{
+      }}
+        >
         <input
+        className="foodCheckbox"
+        style={{
+          width:"3vw",
+          height:"3vw",
+          
+        }}
           type="checkbox"
           onChange={() => {
             triedIt(food);
@@ -365,15 +375,67 @@ function Item({
           checked={foodTried}
           // readOnly
         />
-        <br />
-        <button
+       <Stack gap={1} 
+            className="p-1"
+            style={{
+              // border:"solid black 3px"
+            }}
+            >
+             <Button variant="success"
+              className="border border-2 border-dark rounded"
+              style={{
+                fontSize:"2vw"
+              }}
+          name="😋"
+          // onClick={(event) => {
+          //   changeOpinion(food, event);
+          // }}
+          onClick={(event) => {
+            changeOpinion(food, event);
+          }}
+        
+        >
+          😋          
+        </Button> 
+        <Button variant="secondary"
+        className="border border-dark border-2 rounded"
+        style={{
+          fontSize:"2vw"
+        }}
+          name="🤫"
+          // onClick={(event) => {
+          //   changeOpinion(food, event);
+          // }}
+          onClick={(event) => {
+            changeOpinion(food, event);
+          }}
+        >
+          🤫
+        </Button>
+        <Button variant = "danger"
+        className="border border-dark border-2 rounded"
+        style={{
+          fontSize:"2vw"
+        }}
+          name="🤮"
+          // onClick={(event) => {
+          //   changeOpinion(food, event);
+          // }}
+          onClick={(event) => {
+            changeOpinion(food, event);
+          }}
+        >
+          🤮
+        </Button>
+            </Stack>
+        {/* <button
           name="😋"
           onClick={(event) => {
             changeOpinion(food, event);
           }}
         >
           Yes
-        </button>
+        </button> 
         <button
           name="🤫"
           onClick={(event) => {
@@ -389,17 +451,24 @@ function Item({
           }}
         >
           No
-        </button>
+        </button>*/}
         {/* comment this one out once done */}
-        <button
+        {/* <button
           name="🤷‍♀️"
           onClick={(event) => {
             changeOpinion(food, event);
           }}
         >
           Reset
-        </button>
-        <p>{foodOpinion}</p>
+        </button> */}
+        <p
+        className="p-1 mx-1 mb-0 border border-dark border-2 rounded bg-light"
+        style={{
+          fontSize:"2.5vw",
+          // border:"solid black 2px",
+          // borderRadius:"4px"
+        }}
+        >{foodOpinion}</p>
       </td>
       }
       {/*
