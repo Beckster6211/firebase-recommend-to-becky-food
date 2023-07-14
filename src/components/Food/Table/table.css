@@ -1,38 +1,45 @@
 .foodTableComponent{
-    
+  overflow: auto;
+  /* width: auto; */
+            height: 80vmin;
     /* width: 95%; */
-    border-style: solid;
+    /* border-style: solid;
     border-color: black;
-    border-width: 5px;
+    border-width: 5px; */
     /* padding: 2%; */
-    margin: 1%;
-    background-color: bisque;
+    /* margin: 1%;
+    background-color: bisque; */
     
   }
 
   .foodTable{
-    background-color: aqua;
-    table-layout: auto;
-    width:100%;
-    border-collapse: collapse;
-  overflow-wrap: break-word;
-  hyphens: auto;
+    background-color: #FFC107; /*bootstrap warning*/
+    table-layout: fixed;
+    word-wrap: break-word;
+    /* table-layout: auto; */
+    /* width:100%; */
+    /* border-collapse: collapse; */
+  /* overflow-wrap: break-word; */
+  /* hyphens: auto; */
   }
 
   .tableHead{
-    background-color: grey;
+    position: sticky;
+    top: 0;
+    /* font-size: 1.6vw; */
+    /* max-width: 100%; */
+    /* background-color: grey; */
     /* width: 95%;
    padding: 5%; */
   }
 
   .tableHeader{
-    
     /* 
     to try and make the table head sticky
     position: sticky;
     top:0; */
-    background-color: gold;
-    border-style: solid;
+    /* background-color: gold;
+    border-style: solid; */
     /* border-color: magenta; */
     
   }
@@ -42,13 +49,13 @@
   } */
 
   tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color:#ffff99; /*warning subtle*/
   }
-  tr:hover {
-    background-color: #ffff99;
-  }
+  /* tr:hover {
+    background-color: white;
+  } */
 
-  .tableFoot{
+  /* .tableFoot{
     background-color: blue;
-  }
+  } */
 

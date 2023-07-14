@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import FoodTable from "./Table/table";
-import Form from "./Form/form";
+import FoodForm from "./Form/form";
 import "./food.css";
 
 import Nav from "../Nav/nav";
+
+import Accordion from 'react-bootstrap/Accordion';
+import Container from "react-bootstrap/Container"
 
 
 import { db } from "../../firebase";
@@ -97,30 +100,103 @@ function Food({Becky}) {
   };
 
   return (
-    <div className="foodPage">
-      <div>
-        <br/>
+    // <div className="foodPage">
+      <Container 
+      fluid
+      className="foodPage"
+      style={{}}
+      >
+      <br/>
+      <Container 
+        className=" bg-warning-subtle rounded  w-50 text-center p-0" 
+        style={{
+          fontSize:"3vw", 
+          fontWeight:"900"
+        }}
+        >
+            🥄🥣☕ &nbsp;&nbsp;FOOD PAGE&nbsp;&nbsp;🧂🥤🍽️
+      </Container>
+      {/* <div>
+        <br/> */}
         {/* <Nav/> */}
         {/* <h3>Recommend to Becky</h3> */}
-        <h4>Food Page</h4>
-      </div>
-      <div>
-        <Form
-          food={food}
-          handleChange={handleChange}
-          submitForm={handleSubmit}
-        />
-      </div>
-      <div>
-        <FoodTable
-          userBecky={Becky}
-          food={food}
-          foodITried={haveTried}
-          deleteFood={deleteFood}
-          handleOpinion={changeOpinion}
-        />
-      </div>
-    </div>
+        {/* <h4 className = "header">FOOD PAGE</h4>
+        
+      </div> */}
+      <br/>
+      <Accordion 
+      defaultActiveKey={["0"]} 
+      alwaysOpen
+      className="foodAcord p-2 border border-dark border-3 rounded bg-light"
+      style={{
+      }}
+      >
+        <Accordion.Item 
+        eventKey="1" 
+        className="border border-dark border-3 rounded">
+          <Accordion.Header 
+          className="">
+            <Container 
+            fluid 
+            className="text-center"
+            style={{
+              fontSize:"2.5vw", 
+              fontWeight:"700"
+            }}
+            >
+              Food Form
+              {/* <h3 >Form for Food</h3> */}
+              </Container>
+           </Accordion.Header>
+          <Accordion.Body 
+          className="px-2 py-3">
+            {/* <div> */}
+              <FoodForm
+              food={food}
+              handleChange={handleChange}
+              submitForm={handleSubmit}
+            />
+            {/* </div> */}
+          </Accordion.Body>
+        </Accordion.Item>
+        {/* <br/> */}
+        <br/>
+        <Accordion.Item 
+        eventKey="0" 
+        className="border border-dark border-3 rounded"
+        // style={{height:"70vw"}}
+        >
+          <Accordion.Header>
+            <Container 
+            fluid 
+            className="text-center"
+            style={{
+              fontSize:"2.5vw", 
+              fontWeight:"700"
+            }}
+            >
+              Food Table
+            </Container>
+           {/* <h3>Food Table</h3>  */}
+            </Accordion.Header>
+          <Accordion.Body 
+          className="px-2 py-3"
+          >
+            {/* <div> */}
+              <FoodTable
+              userBecky={Becky}
+              food={food}
+              foodITried={haveTried}
+              deleteFood={deleteFood}
+              handleOpinion={changeOpinion}
+              
+            />
+            {/* </div> */}
+          </Accordion.Body>
+        </Accordion.Item>
+      </Accordion>
+      </Container>
+    // </div>
   );
 }
 

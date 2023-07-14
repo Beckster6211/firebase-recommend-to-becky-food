@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./form.module.css";
+// import styles from "./form.module.css";
 
 /*
 css like the guy in video does about firebase todo list
@@ -14,11 +14,138 @@ const style = {
 </div>
 */
 
-function Form({ food, handleChange, submitForm }) {
+import Container from "react-bootstrap/Container";
+import Card from "react-bootstrap/Card"
+import Form from "react-bootstrap/Form"
+import FloatingLabel from "react-bootstrap/FloatingLabel";
+import Button from "react-bootstrap/button"
+
+function FoodForm({ food, handleChange, submitForm }) {
   return (
-    <div className={styles.foodForm}>
-      <h6>Form Page</h6>
-      <details>
+    <Container 
+    fluid 
+    className="bg-warning border border-warning border-3 rounded p-1">
+      {/* <h6>Form Page</h6> */}
+      <Container 
+      fluid 
+        className="bg-warning p-2">
+        <Card 
+          className ="bg-warning-subtle border border-warning-subtle" >
+          <Card.Body>
+          {/* <Card.Title>Food Form</Card.Title> */}
+
+          <Form 
+            className = "bg-warning-subtle p-1" 
+          autoComplete="off"
+          onSubmit={(event) => {
+            submitForm(event);
+          }}
+            style={{
+              fontSize:"1.6vw"
+            }}
+          >
+
+            <Form.Group 
+              className = ""  
+              controlId="formFood"
+            >
+              {/* <Form.Label>Food</Form.Label> */}
+              <FloatingLabel 
+              className=""
+              style={{
+                fontSize:"1.2vw"
+              }}
+              controlId = "formFoodItem" 
+              label= "Food...">
+                <Form.Control 
+                className="text-break border border-dark
+               border-3"
+               style={{
+                fontSize:"1.4vw"
+              }} 
+                type="text"
+                placeholder = "Food..." 
+                name="formFoodItem"
+                // id="formFoodItem"
+                // type="text"
+                // placeholder="Food..."
+                onChange={(event) => {
+                  handleChange(event);
+                }}></Form.Control>
+              </FloatingLabel>
+            </Form.Group>
+
+            <Form.Group 
+            className="pt-2">
+              {/* <Form.Label>Recipe</Form.Label> */}
+              <FloatingLabel 
+              style={{
+                fontSize:"1.2vw"
+              }}
+              controlId = "formFoodRecipe" 
+              label= "Recipe/Where...">
+                <Form.Control 
+                className="border border-dark border-3" 
+                
+                as = "textarea" 
+                style = {{
+                  height:"110px",
+                  fontSize:"1.4vw"
+                }} 
+                placeholder = "Recipe/Where..."
+                name="formFoodRecipe"
+                // id="formFoodRecipe"
+                // type="text"
+                // placeholder="Where/Recipe..."
+                onChange={(event) => {
+                  handleChange(event);
+                }}></Form.Control>
+              </FloatingLabel>
+            </Form.Group>
+
+            <Form.Group 
+            className="py-2" 
+            controlId="formFoodRecommend">
+              {/* <Form.Label>Recommended By</Form.Label> */}
+              <FloatingLabel 
+              style={{
+                fontSize:"1.2vw"
+              }}
+              controlId = "formFoodRecommend" label="Recommended By..." >
+                <Form.Control 
+                className="border border-dark border-3"
+                style={{
+                  fontSize:"1.4vw"
+                }} 
+                type="text" 
+                placeholder="Recommended By..."
+                name="formFoodRecommend"
+                // id="formFoodRecommend"
+                // type="text"
+                // placeholder="Recommmended By..."
+                onChange={(event) => {
+                  handleChange(event);
+                }}></Form.Control>
+              </FloatingLabel>
+            </Form.Group>
+
+            <Button 
+            variant = "info"
+            className="border border-dark border-3 text-dark"  
+            type = "submit"
+            style={{
+              fontSize:"1.6vw", 
+              width:"auto"
+            }}
+            >
+              😄 Enjoy 😄
+              </Button>
+
+          </Form>
+          </Card.Body>
+        </Card>
+      </Container>
+      {/* <details>
       <summary>Form Summary</summary>
       <div>
         <form
@@ -26,8 +153,8 @@ function Form({ food, handleChange, submitForm }) {
           onSubmit={(event) => {
             submitForm(event);
           }}
-        >
-          <input
+        > */}
+          {/* <input
             name="formFoodItem"
             id="formFoodItem"
             type="text"
@@ -37,9 +164,9 @@ function Form({ food, handleChange, submitForm }) {
             }}
           />
           <br />
-          <br />
+          <br /> */}
           {/* <input type="text" placeholder="Where/Recipe..." /> */}
-          <textarea
+          {/* <textarea
             name="formFoodRecipe"
             id="formFoodRecipe"
             type="text"
@@ -47,8 +174,8 @@ function Form({ food, handleChange, submitForm }) {
             onChange={(event) => {
               handleChange(event);
             }}
-          />
-          <br />
+          /> */}
+          {/* <br />
           <input
             name="formFoodRecommend"
             id="formFoodRecommend"
@@ -63,8 +190,8 @@ function Form({ food, handleChange, submitForm }) {
           <br />
         </form>
       </div>
-      </details>
-    </div>
+      </details> */}
+    </Container>
   );
 }
-export default Form;
+export default FoodForm;

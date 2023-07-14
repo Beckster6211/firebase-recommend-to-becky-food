@@ -4,6 +4,7 @@ import Food from "./components/Food/food";
 import Home from "./components/Home/home";
 import Header from "./components/Header/header";
 import Nav from "./components/Nav/nav";
+import Footer from "./components/Footer/footer";
 
 import React, {useState} from "react"
 import {getAuth, onAuthStateChanged} from "firebase/auth"
@@ -54,6 +55,7 @@ onAuthStateChanged(auth, (user)=>{
       {/* <Food /> */}
       
     </Routes>
+    <Footer/>
     </div>
   );
 }
