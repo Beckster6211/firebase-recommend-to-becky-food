@@ -1,6 +1,3 @@
-// import React from "react";
-import "./item.css";
-
 import React, {useState} from "react"
 import {getAuth, onAuthStateChanged} from "firebase/auth"
 
@@ -12,6 +9,8 @@ import Stack from 'react-bootstrap/Stack'
 import InputGroup from 'react-bootstrap/InputGroup';
 import Form from "react-bootstrap/Form"
 import Badge from "react-bootstrap/Badge"
+
+import "./item.css";
 
 function Item({
   food,
@@ -68,6 +67,7 @@ function Item({
             }}
             >{foodItem}</p>
             <Form.Control 
+            name="foodTableFoodTextarea"
             className="border border-dark border-2 p-1"
             as="textarea"
             defaultValue={foodRecipe} 
@@ -155,6 +155,7 @@ function Item({
         className="justify-content-evenly"
         >
           <input
+          name="foodTableTriedCheckbox"
             className="foodCheckbox"
             style={{
               width:"3vw",
@@ -407,7 +408,9 @@ function Item({
           <Stack 
         direction="horizontal"
         className="justify-content-evenly"
-        ><input
+        >
+          <input
+          name="foodTableBeckyTriedCheckbox"
         className="foodCheckbox"
         style={{
           width:"3vw",

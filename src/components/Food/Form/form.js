@@ -35,6 +35,7 @@ function FoodForm({ food, handleChange, submitForm }) {
           {/* <Card.Title>Food Form</Card.Title> */}
 
           <Form 
+          id="foodForm"
             className = "bg-warning-subtle p-1" 
           autoComplete="off"
           onSubmit={(event) => {
