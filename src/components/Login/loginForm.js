@@ -3,6 +3,8 @@ import {authentication} from "../../firebase"
 import {createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut} from "firebase/auth"
 import {Link} from "react-router-dom"
 
+import Container from "react-bootstrap/Container"
+
 function LoginForm(){
     const [becky, setBecky] = useState(false)
     const [signIn, setSignIn] = useState(false)
@@ -65,33 +67,120 @@ function LoginForm(){
 
     }    
 return (
-    <div>
-        
+    <div
+    className=""
+    style={{
+        // backgroundColor:"blue",
+        minHeight: "60vh",
+        border: "solid black 2px"
+    }}
+    >
+        <br/>
+        <Container 
+        // fluid
+        className="bg-secondary-subtle border border-secondary border-3 rounded py-3"
+        style={{
+
+        }}
+        >
         {/* <button>login</button> */}
+        {/* <br/> */}
+        {/* <button onClick={createUser}>Create User</button> */}
+        {/* <br/>
+        <br/> */}
+        <button 
+        className=""
+        style={{
+
+        }}
+        onClick={signOutUser}>
+            <Link 
+            to = "/" >
+            Sign Out
+            </Link>
+        </button>
         <br/>
-        <button onClick={createUser}>Create User</button>
+        <br/>
+        <input 
+        className=""
+        style={{
+
+        }}
+        type = "email" 
+        placeholder = {"Email..."} 
+        autoComplete="off" 
+        onChange = {(event)=>{getEmail(event)}}
+        />
         <br/>
         <br/>
-        <input type = "email" placeholder = {"Email..."} autoComplete="off" onChange = {(event)=>{getEmail(event)}}/>
-        <br/>
-        <br/>
-        <input type="password" placeholder ="Password" autoComplete="off" onChange = {(event) => {getPassword(event)}}/>
-       
+        <input 
+        className=""
+        style={{
+
+        }}
+        type="password" 
+        placeholder ="Password" 
+        autoComplete="off" 
+        onChange = {(event) => {getPassword(event)}}
+        />
+
         {/* <button onClick={createUser}>Create User</button> */}
         <br/>
         <br/>
+
         {/* {signIn === true ? 
         <button onClick={signOutUser}>Sign Out</button>
         : 
         <button onClick={signInUser}>Sign In</button>
         } */} 
+
+<br/>
+        <button 
+        className=""
+        style={{
+
+        }}
+        onClick={signInUser}> 
+            <Link 
+            to = "/">
+            Sign In
+            </Link>
+        </button>
         <br/>
-        <button onClick={signInUser}> <Link to = "/" >Sign In</Link></button>
+        {/* /
         <br/>
+        <button onClick={signOutUser}><Link to = "/" >Sign Out</Link></button> */}
+        {/* {becky === true ? 
+        <p>"Hi Becky"</p>
+        : <p>"Hello someone else"</p>
+    } */}
+        </Container>
+        {/* ////////////////////////// */}
+        {/* <button>login</button> */}
+        {/* <br/>
+        <button onClick={createUser}>Create User</button>
+        <br/>
+        <br/>
+        <input type = "email" placeholder = {"Email..."} autoComplete="off" onChange = {(event)=>{getEmail(event)}}/>
+        <br/>
+        <br/> */}
+        {/* <input type="password" placeholder ="Password" autoComplete="off" onChange = {(event) => {getPassword(event)}}/> */}
        
+        {/* <button onClick={createUser}>Create User</button> */}
+        {/* <br/>
+        <br/> */}
+        {/* {signIn === true ? 
+        <button onClick={signOutUser}>Sign Out</button>
+        : 
+        <button onClick={signInUser}>Sign In</button>
+        } */} 
+        {/* <br/>
+        <button onClick={signInUser}> <Link to = "/" >Sign In</Link></button>
+        <br/> */}
+{/*        
         /
         <br/>
-        <button onClick={signOutUser}><Link to = "/" >Sign Out</Link></button>
+        <button onClick={signOutUser}><Link to = "/" >Sign Out</Link></button> */}
         {/* {becky === true ? 
         <p>"Hi Becky"</p>
         : <p>"Hello someone else"</p>
