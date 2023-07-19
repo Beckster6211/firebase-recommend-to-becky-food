@@ -112,7 +112,7 @@ return (
             >
                 <Link 
             to = "/" 
-            className="text-dark"
+            className="text-dark text-decoration-none"
             >
             Sign Out
             </Link>
@@ -192,7 +192,7 @@ return (
             >
                 <Link 
             to = "/" 
-            className="text-dark"
+            className="text-dark text-decoration-none"
             >
             Sign In
             </Link>

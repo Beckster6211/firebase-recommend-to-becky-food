@@ -11,6 +11,9 @@ import Container from 'react-bootstrap/Container';
 
 import Nav from "../Nav/nav"
 
+
+import BeckyAlert from "../Alerts/beckyAlert";
+
 function Home(){
 
   
@@ -23,6 +26,7 @@ function Home(){
           margin: "5px", 
           background: "brown"
           }}>
+            <BeckyAlert/>
             {/* <Nav/> */}
            
             <br/>
