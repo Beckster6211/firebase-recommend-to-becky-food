@@ -74,22 +74,26 @@ return (
     <div
     className=""
     style={{
-        // backgroundColor:"blue",
+        backgroundColor:"beige",
         minHeight: "60vh",
-        border: "solid black 2px"
+        // border: "solid black 2px"
     }}
     >
-        <Container 
+        {/* <Container 
         fluid
         className=""
         style={{
             height:"13vh",
-            backgroundColor: "burlywood",
+            backgroundColor: "beige",
             // border: "solid "
         }}
         >
 
-        </Container>
+        </Container> */}
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         <Container 
         // fluid
         className="bg-secondary-subtle border border-secondary border-3 rounded  pt-5"
@@ -281,17 +285,21 @@ return (
         : <p>"Hello someone else"</p>
     } */}
         </Container>
-        <Container 
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        {/* <Container 
         fluid
         className=""
         style={{
             height:"13vh",
-            backgroundColor: "burlywood",
+            backgroundColor: "beige",
             // border: "solid "
         }}
         >
 
-        </Container>
+        </Container> */}
         {/* ////////////////////////// */}
         {/* <button>login</button> */}
         {/* <br/>
