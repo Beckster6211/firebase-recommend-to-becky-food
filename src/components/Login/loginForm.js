@@ -4,6 +4,10 @@ import {createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut} fro
 import {Link} from "react-router-dom"
 
 import Container from "react-bootstrap/Container"
+import Form from "react-bootstrap/Form"
+import FloatingLabel from 'react-bootstrap/FloatingLabel';
+import Button from 'react-bootstrap/Button';
+
 
 function LoginForm(){
     const [becky, setBecky] = useState(false)
@@ -75,19 +79,127 @@ return (
         border: "solid black 2px"
     }}
     >
-        <br/>
+        <Container 
+        fluid
+        className=""
+        style={{
+            height:"13vh",
+            backgroundColor: "burlywood",
+            // border: "solid "
+        }}
+        >
+
+        </Container>
         <Container 
         // fluid
-        className="bg-secondary-subtle border border-secondary border-3 rounded py-3"
+        className="bg-secondary-subtle border border-secondary border-3 rounded  pt-5"
+        style={{
+            // width:"75vh",
+            // height:"40vh"
+        }}
+        >
+            <Button 
+            variant="success"
+            className="bg-success-subtle"
+            style={{
+
+            }}
+            onClick={signOutUser}
+            >
+                <Link 
+            to = "/" 
+            className="text-dark"
+            >
+            Sign Out
+            </Link>
+            </Button>
+        {/* <button 
+        className=""
         style={{
 
         }}
+        onClick={signOutUser}
         >
+            <Link 
+            to = "/" >
+            Sign Out
+            </Link>
+        </button> */}
+        <br/>
+        <br/>
+            <Form 
+            className=""
+            style={{
+                fontsize:"1.6vw"
+            }}
+            >           
+                <Form.Group
+                className=""
+                style={{
+                    // width:"62vh"
+                }}
+                >
+                    <FloatingLabel
+                    controlId="loginEmail"
+                    label="Email address"
+                    >
+                        <Form.Control
+                            type="email"
+                            placeholder="Email..."
+                            autoComplete="off"
+                            onChange = {(event)=>{getEmail(event)}}
+                            className="border border-secondary border-3"
+                            style={{
+                            }}
+                        > 
+                        </Form.Control>
+                    </FloatingLabel>
+                </Form.Group>
+                <br/>
+                <Form.Group>
+                    <FloatingLabel
+                    controlId="LoginPassword"
+                    label="Password"
+                    >
+                    <Form.Control
+                    type="password"  
+                    autoComplete="off" 
+                    placeholder="Password..."
+                    onChange = {(event) => {getPassword(event)}}
+                    className="border border-secondary border-3"
+                    style={{}}
+                    >
+                    </Form.Control>
+                    </FloatingLabel>
+                    
+                </Form.Group>
+
+                
+
+            </Form>
+            <br/>
+            <Button 
+            variant="primary"
+            className="bg-primary-subtle"
+            style={{
+
+            }}
+            onClick={signInUser}
+            >
+                <Link 
+            to = "/" 
+            className="text-dark"
+            >
+            Sign In
+            </Link>
+            </Button>
         {/* <button>login</button> */}
         {/* <br/> */}
         {/* <button onClick={createUser}>Create User</button> */}
         {/* <br/>
         <br/> */}
+        {/* 
+        ///////////////////
         <button 
         className=""
         style={{
@@ -100,7 +212,11 @@ return (
             </Link>
         </button>
         <br/>
-        <br/>
+        <br/> 
+        ///////////////////
+        */}
+        {/* 
+        ////////////////////
         <input 
         className=""
         style={{
@@ -110,7 +226,11 @@ return (
         placeholder = {"Email..."} 
         autoComplete="off" 
         onChange = {(event)=>{getEmail(event)}}
-        />
+        /> 
+        ////////////////////
+        */}
+        {/* 
+        ///////////////////
         <br/>
         <br/>
         <input 
@@ -122,7 +242,9 @@ return (
         placeholder ="Password" 
         autoComplete="off" 
         onChange = {(event) => {getPassword(event)}}
-        />
+        /> 
+        /////////////////
+        */}
 
         {/* <button onClick={createUser}>Create User</button> */}
         <br/>
@@ -135,6 +257,8 @@ return (
         } */} 
 
 <br/>
+        {/* 
+        //////////////
         <button 
         className=""
         style={{
@@ -145,7 +269,9 @@ return (
             to = "/">
             Sign In
             </Link>
-        </button>
+        </button> 
+        ///////////////////
+        */}
         <br/>
         {/* /
         <br/>
@@ -154,6 +280,17 @@ return (
         <p>"Hi Becky"</p>
         : <p>"Hello someone else"</p>
     } */}
+        </Container>
+        <Container 
+        fluid
+        className=""
+        style={{
+            height:"13vh",
+            backgroundColor: "burlywood",
+            // border: "solid "
+        }}
+        >
+
         </Container>
         {/* ////////////////////////// */}
         {/* <button>login</button> */}
