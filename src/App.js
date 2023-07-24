@@ -3,7 +3,7 @@ import Login from "./components/Login/loginButton";
 import Food from "./components/Food/food";
 import Home from "./components/Home/home";
 import Header from "./components/Header/header";
-import Nav from "./components/Nav/nav";
+import Navigation from "./components/Nav/nav";
 import Footer from "./components/Footer/footer";
 
 
@@ -33,24 +33,24 @@ onAuthStateChanged(auth, (user)=>{
         }
     })
 
-    const [show, setShow] = useState(true)
-    const [open, setOpen] = useState(true)
-    const handleClose = () => setOpen(false);
-    const handleShow = () => setShow(false);
+    // const [show, setShow] = useState(true)
+    // const [open, setOpen] = useState(true)
+    // const handleClose = () => setOpen(false);
+    // const handleShow = () => setShow(false);
 
-    console.log({show})
-    console.log({open})
+    // console.log({show})
+    // console.log({open})
 
 
   return (
   <div className="App">
     <Header/>
-    <Nav/>
+    <Navigation/>
     {/* <header>
       <h3>Recommend to Becky</h3>
       <button><Link to = "/login" >Login</Link></button>
     </header> */}
-    <br/>
+    {/* <br/> */}
       {/* <div>
        <nav>
           <button><Link to = "/" >Home</Link></button>

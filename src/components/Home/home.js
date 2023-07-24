@@ -17,20 +17,16 @@ import Nav from "../Nav/nav"
 import BeckyAlert from "../Alerts/beckyAlert";
 
 function Home(){
-  
+
+  // ///////////////////
   // const [show, setShow] = useState(true)
   // const [open, setOpen] = useState(true)
+  // // const handleClose = () => setOpen(false);
+  // // const handleShow = () => setShow(false);
 
-  // console.log({ show });
-
-
-  const [show, setShow] = useState(true)
-  const [open, setOpen] = useState(true)
-  // const handleClose = () => setOpen(false);
-  // const handleShow = () => setShow(false);
-
-  console.log({show})
-  console.log({open})
+  // console.log({show})
+  // console.log({open})
+  // //////////////////
 
     return (
         <div 
@@ -39,33 +35,27 @@ function Home(){
           border:"solid", 
           margin: "5px", 
           background: "brown"
-          }}>
-            <Container
-            fluid
-            className="border border-primary border-3"
-            style={{
-              minHeight:"75vh"
-            }}
-            
-            >
-          {
+          }}>    
+          {/* ///////////////////////////////////////////       */}
+          {/* {
                 show ?
                 <Modal
-                className=""
+                className="bg-light bg-opacity-50"
                 style={{
-
+                  fontSize:"3vw"
                 }} 
                 show={open} 
                 onHide = {()=> setOpen(false)}
                 centered
                 animation
-                size="sm"
+                
                 >
                 <Modal.Body 
                 className="text-center rounded bg-success"
                 style={{
 
                 }}
+                
                 >
                   Hi Becky
                   <br/>
@@ -73,18 +63,9 @@ function Home(){
                   <br/>
                   fingers crossed)
                 </Modal.Body>
-                {/* <Modal.Footer>
-                  <Button 
-                  variant="secondary" 
-                  onClick={() => setShow(false)}
-                  // onClick={() => console.log("close")}
-                  >
-                    Close
-                  </Button>
-                </Modal.Footer> */}
               </Modal>
-                 :
-                 <Modal
+                 : */}
+                 {/* <Modal
                  className=""
                  style={{
  
@@ -106,18 +87,11 @@ function Home(){
                    <br/>
                    (sorry if you have already seen this once, working on it)
                  </Modal.Body>
-                 {/* <Modal.Footer>
-                   <Button 
-                   variant="secondary" 
-                   onClick={() => setShow(false)}
-                   // onClick={() => console.log("close")}
-                   >
-                     Close
-                   </Button>
-                 </Modal.Footer> */}
-               </Modal>
+               </Modal> */}
 
-            //     <Toast 
+            {/* //     
+            dont need this
+            <Toast 
             // className="border border-dark border-3"
             // style={{
 
@@ -136,13 +110,22 @@ function Home(){
             // >
             //   Hi Someone Else
             //   </Toast.Body>
-            // </Toast>
-} 
+            // </Toast> */}
+{/* }  */}
+{/* //////////////////////////////////// */}
+            <Container
+            fluid
+            className="border border-primary border-3"
+            style={{
+              minHeight:"75vh"
+            }}
             
+            >
+            <p>Home Page</p>
             {/* <BeckyAlert/> */}
             {/* <Nav/> */}
            
-            <br/>
+            {/* <br/> */}
             {/* <div>
        <nav>
           <button><Link to = "/" >Home</Link></button>
