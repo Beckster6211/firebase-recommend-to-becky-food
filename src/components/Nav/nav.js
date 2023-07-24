@@ -22,6 +22,9 @@ function Navigation(){
             variant="tabs" 
             defaultActiveKey={"/home"}
             >
+                {/* ////////////// 
+                Maybe take away home button or link home to header
+                */}
                 <Nav.Item
                 className="border-end border-dark border-2 "
                 style={{
@@ -37,6 +40,9 @@ function Navigation(){
                     >
                         Home</Nav.Link>
                 </Nav.Item>
+                {/* ////////////// 
+                Maybe take away home button or link home to header
+                */}
                 <Nav.Item
                 className="border-end border-dark border-2 bg-warning"
                 >

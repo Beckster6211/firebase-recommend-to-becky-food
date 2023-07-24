@@ -60,7 +60,7 @@ onAuthStateChanged(auth, (user)=>{
         </nav>
       </div> */}
 
-
+      {/* <Home/> */}
     <Routes>
       <Route path = "/" element = {<Home Becky = {isBecky}/>} />
       <Route path = "/food" element ={<Food Becky = {isBecky}/>} />
@@ -71,6 +71,7 @@ onAuthStateChanged(auth, (user)=>{
       {/* <Food /> */}
       
     </Routes>
+    <Navigation/>
     <Footer/>
         </div>
   );
