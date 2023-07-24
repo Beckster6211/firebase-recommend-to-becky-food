@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import "./home.css"
 import {Link} from "react-router-dom"
 
@@ -8,15 +8,29 @@ import Container from 'react-bootstrap/Container';
 
 // import styles from "./home.css";
 
+import Toast from 'react-bootstrap/Toast';
+import Modal from "react-bootstrap/Modal"
+
 
 import Nav from "../Nav/nav"
-
 
 import BeckyAlert from "../Alerts/beckyAlert";
 
 function Home(){
-
   
+  // const [show, setShow] = useState(true)
+  // const [open, setOpen] = useState(true)
+
+  // console.log({ show });
+
+
+  const [show, setShow] = useState(true)
+  const [open, setOpen] = useState(true)
+  // const handleClose = () => setOpen(false);
+  // const handleShow = () => setShow(false);
+
+  console.log({show})
+  console.log({open})
 
     return (
         <div 
@@ -26,7 +40,106 @@ function Home(){
           margin: "5px", 
           background: "brown"
           }}>
-            <BeckyAlert/>
+            <Container
+            fluid
+            className="border border-primary border-3"
+            style={{
+              minHeight:"75vh"
+            }}
+            
+            >
+          {
+                show ?
+                <Modal
+                className=""
+                style={{
+
+                }} 
+                show={open} 
+                onHide = {()=> setOpen(false)}
+                centered
+                animation
+                size="sm"
+                >
+                <Modal.Body 
+                className="text-center rounded bg-success"
+                style={{
+
+                }}
+                >
+                  Hi Becky
+                  <br/>
+                  (you know what to do
+                  <br/>
+                  fingers crossed)
+                </Modal.Body>
+                {/* <Modal.Footer>
+                  <Button 
+                  variant="secondary" 
+                  onClick={() => setShow(false)}
+                  // onClick={() => console.log("close")}
+                  >
+                    Close
+                  </Button>
+                </Modal.Footer> */}
+              </Modal>
+                 :
+                 <Modal
+                 className=""
+                 style={{
+ 
+                 }} 
+                 show={open} 
+                 onHide = {()=> setOpen(false)}
+                 centered
+                 animation
+                 >
+                 <Modal.Body 
+                 className="text-center rounded bg-success"
+                 style={{
+ 
+                 }}
+                 >
+                   Welcome to...
+                   <br/>
+                   Recommend To Becky
+                   <br/>
+                   (sorry if you have already seen this once, working on it)
+                 </Modal.Body>
+                 {/* <Modal.Footer>
+                   <Button 
+                   variant="secondary" 
+                   onClick={() => setShow(false)}
+                   // onClick={() => console.log("close")}
+                   >
+                     Close
+                   </Button>
+                 </Modal.Footer> */}
+               </Modal>
+
+            //     <Toast 
+            // className="border border-dark border-3"
+            // style={{
+
+            // }}
+            // bg="success"
+            // // onClose={() => setOpen(false)}
+            // show={open} 
+            // // delay={5000} 
+            // autohide
+            // >
+            // <Toast.Body
+            // className=""
+            // style={{
+
+            // }}
+            // >
+            //   Hi Someone Else
+            //   </Toast.Body>
+            // </Toast>
+} 
+            
+            {/* <BeckyAlert/> */}
             {/* <Nav/> */}
            
             <br/>
@@ -38,6 +151,7 @@ function Home(){
        
         </nav>
       </div> */}
+      </Container>
         </div>
     )
 }

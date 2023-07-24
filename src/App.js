@@ -6,6 +6,11 @@ import Header from "./components/Header/header";
 import Nav from "./components/Nav/nav";
 import Footer from "./components/Footer/footer";
 
+
+import Toast from 'react-bootstrap/Toast';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+
 import React, {useState} from "react"
 import {getAuth, onAuthStateChanged} from "firebase/auth"
 import {Route, Routes, Link} from "react-router-dom"
@@ -28,6 +33,15 @@ onAuthStateChanged(auth, (user)=>{
         }
     })
 
+    const [show, setShow] = useState(true)
+    const [open, setOpen] = useState(true)
+    const handleClose = () => setOpen(false);
+    const handleShow = () => setShow(false);
+
+    console.log({show})
+    console.log({open})
+
+
   return (
   <div className="App">
     <Header/>
@@ -45,8 +59,10 @@ onAuthStateChanged(auth, (user)=>{
        
         </nav>
       </div> */}
+
+
     <Routes>
-      <Route path = "/" element = {<Home/>} />
+      <Route path = "/" element = {<Home Becky = {isBecky}/>} />
       <Route path = "/food" element ={<Food Becky = {isBecky}/>} />
       <Route path = "/login" element = {<Login/>} />
       {/* <Login/> */}
@@ -56,7 +72,7 @@ onAuthStateChanged(auth, (user)=>{
       
     </Routes>
     <Footer/>
-    </div>
+        </div>
   );
 }
 
