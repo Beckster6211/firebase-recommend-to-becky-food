@@ -43,7 +43,9 @@ onAuthStateChanged(auth, (user)=>{
 
 
   return (
-  <div className="App">
+  <div 
+  className="App"
+  >
     <Header/>
     <Navigation/>
     {/* <header>

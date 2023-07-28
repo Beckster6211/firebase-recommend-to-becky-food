@@ -8,7 +8,12 @@ import Image from 'react-bootstrap/Image';
 
 function Header(){
     return(
-        <div >
+        <div 
+        className=""
+        style={{
+            // border:"solid black 2px"
+        }}
+        >
             {/* <Container 
             fluid
             className="bg-success border border-dark border-3"
@@ -17,12 +22,14 @@ function Header(){
             }}
             > */}
                 <Navbar 
-                className="p-0"
+                className="m-0"
                 >
                     
                     <Container
                     fluid
-                    className="bg-secondary-subtle py-2"
+                    className="bg-secondary-subtle py-2 mx-1  
+                    border border-dark border-3
+                    "
                     style={{
                         fontSize:"3vw"
                     }}
