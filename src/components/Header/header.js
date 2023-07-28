@@ -1,10 +1,11 @@
 import React from "react"
 import {Link} from "react-router-dom"
-import Nav from "../Nav/nav"
+// import Nav from "../Nav/nav"
 
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Image from 'react-bootstrap/Image';
+import Nav from 'react-bootstrap/Nav';
 
 function Header(){
     return(
@@ -49,7 +50,22 @@ function Header(){
                                 
                             {/* Portfolio */}
                         </Navbar.Brand>
+                        <Nav.Item
+                className=""
+                style={{
+                }}
+                >
+                    <Nav.Link 
+                    href = "/"
+                    className="text-dark p-0"
+                    style={{
+                        fontSize:"3.5vw"
+                    }}
+                    >
                         Recommend To Becky
+                        </Nav.Link>
+                </Nav.Item>
+                        {/* Recommend To Becky */}
                         <Navbar.Brand 
                         href="/login" 
                         className="p-0 m-0"

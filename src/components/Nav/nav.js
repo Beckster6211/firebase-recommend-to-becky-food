@@ -25,7 +25,7 @@ function Navigation(){
                 {/* ////////////// 
                 Maybe take away home button or link home to header
                 */}
-                <Nav.Item
+                {/* <Nav.Item
                 className="border-end border-dark border-2 "
                 style={{
                     background: "brown"
@@ -39,7 +39,7 @@ function Navigation(){
                     }}
                     >
                         Home</Nav.Link>
-                </Nav.Item>
+                </Nav.Item> */}
                 {/* ////////////// 
                 Maybe take away home button or link home to header
                 */}

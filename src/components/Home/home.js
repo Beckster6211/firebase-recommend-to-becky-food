@@ -30,9 +30,9 @@ function Home(){
 
     return (
         <div 
-        className = "homePage" 
+        className = "homePage border border-dark border-3 mx-1 my-2" 
         style={{
-          border:"solid", 
+          // border:"solid black 4px", 
           margin: "5px", 
           background: "brown"
           }}>    
@@ -115,7 +115,7 @@ function Home(){
 {/* //////////////////////////////////// */}
             <Container
             fluid
-            className="border border-primary border-3"
+            className=""
             style={{
               minHeight:"75vh"
             }}
