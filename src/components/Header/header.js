@@ -59,7 +59,7 @@ function Header(){
                     href = "/"
                     className="text-dark p-0"
                     style={{
-                        fontSize:"3.5vw"
+                        fontSize:"3.2vw"
                     }}
                     >
                         Recommend To Becky

@@ -52,7 +52,8 @@ function Navigation(){
                         fontSize:"2.5vw"
                     }}
                     >
-                        Food</Nav.Link>
+                        😋 Food 😋
+                        </Nav.Link>
                 </Nav.Item>
                 <Nav.Item
                 className="border-end border-dark border-2"
@@ -63,7 +64,8 @@ function Navigation(){
                         fontSize:"2.5vw"
                     }}
                     >
-                        Watch</Nav.Link>
+                        🎬 Watch 🎬
+                        </Nav.Link>
                 </Nav.Item>
                 <Nav.Item
                 className="border-end border-dark border-2"
@@ -74,7 +76,8 @@ function Navigation(){
                         fontSize:"2.5vw"
                     }}
                     >
-                        Binge</Nav.Link>
+                        📺 Binge 📺
+                        </Nav.Link>
                 </Nav.Item>
                 <Nav.Item
                 className="border-end border-dark border-2"
@@ -85,7 +88,8 @@ function Navigation(){
                         fontSize:"2.5vw"
                     }}
                     >
-                        Read</Nav.Link>
+                        📖 Read 📖
+                        </Nav.Link>
                 </Nav.Item>
                 <Nav.Item
                 className="border-end border-dark border-2"
@@ -96,7 +100,8 @@ function Navigation(){
                         fontSize:"2.5vw"
                     }}
                     >
-                        Visit</Nav.Link>
+                       🗺️ Visit 🗺️
+                       </Nav.Link>
                 </Nav.Item>
                 <Nav.Item
                 className=""
@@ -107,7 +112,8 @@ function Navigation(){
                         fontSize:"2.5vw"
                     }}
                     >
-                        Try</Nav.Link>
+                        💡 Try 💡
+                        </Nav.Link>
                 </Nav.Item>
             </Nav>
       </div>

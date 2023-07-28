@@ -30,11 +30,11 @@ function Home(){
 
     return (
         <div 
-        className = "homePage border border-dark border-3 mx-1 my-2" 
+        className = "homePage border border-dark border-3 mx-1 my-2 bg-secondary-subtle" 
         style={{
           // border:"solid black 4px", 
-          margin: "5px", 
-          background: "brown"
+          // margin: "5px", 
+          // background: "brown"
           }}>    
           {/* ///////////////////////////////////////////       */}
           {/* {
