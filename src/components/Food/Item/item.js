@@ -10,6 +10,8 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Form from "react-bootstrap/Form"
 import Badge from "react-bootstrap/Badge"
 
+import Toast from 'react-bootstrap/Toast';
+
 import "./item.css";
 
 function Item({
@@ -45,6 +47,7 @@ function Item({
 //           setIsBecky(true)
 //         }
 //     })
+
 
   return (
     <tr>
@@ -164,8 +167,8 @@ function Item({
             }}
             type="checkbox"
             onChange = {()=>{
-            console.log("not for you")
-            }}
+              // console.log("Not for you")
+               }}       
             checked={foodTried}
             readOnly
         /> 

@@ -52,7 +52,7 @@ function Navigation(){
                         fontSize:"2.5vw"
                     }}
                     >
-                        😋 Food 😋
+                        😋 Enjoy 😋
                         </Nav.Link>
                 </Nav.Item>
                 <Nav.Item
@@ -88,7 +88,7 @@ function Navigation(){
                         fontSize:"2.5vw"
                     }}
                     >
-                        📖 Read 📖
+                        📚 Read 📚
                         </Nav.Link>
                 </Nav.Item>
                 <Nav.Item

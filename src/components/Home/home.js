@@ -16,11 +16,13 @@ import Nav from "../Nav/nav"
 
 import BeckyAlert from "../Alerts/beckyAlert";
 
-function Home(){
+function Home({Becky}){
+
+  console.log({Becky})
 
   // ///////////////////
   // const [show, setShow] = useState(true)
-  // const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(true)
   // // const handleClose = () => setOpen(false);
   // // const handleShow = () => setShow(false);
 
@@ -38,7 +40,7 @@ function Home(){
           }}>    
           {/* ///////////////////////////////////////////       */}
           {/* {
-                show ?
+                Becky ?
                 <Modal
                 className="bg-light bg-opacity-50"
                 style={{
@@ -64,11 +66,11 @@ function Home(){
                   fingers crossed)
                 </Modal.Body>
               </Modal>
-                 : */}
-                 {/* <Modal
-                 className=""
+                 :
+                 <Modal
+                 className="bg-light bg-opacity-50"
                  style={{
- 
+                  fontSize:"2.5vw"
                  }} 
                  show={open} 
                  onHide = {()=> setOpen(false)}
@@ -85,13 +87,14 @@ function Home(){
                    <br/>
                    Recommend To Becky
                    <br/>
-                   (sorry if you have already seen this once, working on it)
+                   <i><small>(sorry if already seen this once, working on that)</small></i>
                  </Modal.Body>
-               </Modal> */}
+               </Modal> 
+              } */}
 
-            {/* //     
-            dont need this
-            <Toast 
+             {/* //     
+            // dont need this
+            // <Toast 
             // className="border border-dark border-3"
             // style={{
 
@@ -109,10 +112,11 @@ function Home(){
             // }}
             // >
             //   Hi Someone Else
-            //   </Toast.Body>
-            // </Toast> */}
-{/* }  */}
+            //   </Toast.Body> */}
+            {/* // </Toast> */}
+
 {/* //////////////////////////////////// */}
+            
             <Container
             fluid
             className=""
