@@ -1,9 +1,11 @@
 import React from "react"
 
+//
 import Container from "react-bootstrap/Container"
 import Navbar from 'react-bootstrap/Navbar';
 import Image from 'react-bootstrap/Image';
 
+//
 function Footer(){
     return(
         <div
@@ -12,13 +14,6 @@ function Footer(){
             // border:"solid black 2px"
         }}
         >
-            {/* <Container 
-            fluid
-            className="bg-success border border-dark border-3"
-            style={{
-
-            }}
-            > */}
             <Navbar 
                 className="m-0"
                 >
@@ -66,10 +61,6 @@ function Footer(){
                         </Navbar.Brand>
                     </Container>
                 </Navbar>
-            {/* <footer>
-            <h3>Becky Recommends</h3>
-            <button>Login</button>
-            </footer> */}
         </div>
     )
 }

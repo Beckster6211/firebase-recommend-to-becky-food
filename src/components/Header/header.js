@@ -1,12 +1,15 @@
 import React from "react"
-import {Link} from "react-router-dom"
-// import Nav from "../Nav/nav"
 
+import {Link} from "react-router-dom"
+/* COULD DELETE LINK IMPORTED */
+
+//
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Image from 'react-bootstrap/Image';
 import Nav from 'react-bootstrap/Nav';
 
+//
 function Header(){
     return(
         <div 
@@ -15,13 +18,6 @@ function Header(){
             // border:"solid black 2px"
         }}
         >
-            {/* <Container 
-            fluid
-            className="bg-success border border-dark border-3"
-            style={{
-
-            }}
-            > */}
                 <Navbar 
                 className="m-0"
                 >
@@ -84,12 +80,6 @@ function Header(){
                     </Container>
                 </Navbar>
             {/* </Container> */}
-            {/* <header>
-                <h3>Recommend to Becky</h3>
-                <button><Link to = "/login" >Login</Link></button>
-                {/* <Nav/> */}
-            {/* </header>  
-            */}
         </div>
     )
 
