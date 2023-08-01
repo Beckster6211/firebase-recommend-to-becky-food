@@ -2,19 +2,19 @@ import React, {useState} from "react"
 import "./home.css"
 import {Link} from "react-router-dom"
 
+
+import BeckyAlert from "../Alerts/beckyAlert"
+import NotBeckyAlert from "../Alerts/notBeckyAlert"
+
 // import { Button } from "react-bootstrap" // this is better if doing a lot of components
-import Button from 'react-bootstrap/Button' // better to do like this as it doesn't import the whole library with the component
+// import Button from 'react-bootstrap/Button' // better to do like this as it doesn't import the whole library with the component
 import Container from 'react-bootstrap/Container';
 
 // import styles from "./home.css";
 
-import Toast from 'react-bootstrap/Toast';
+/*
 import Modal from "react-bootstrap/Modal"
-
-
-import Nav from "../Nav/nav"
-
-import BeckyAlert from "../Alerts/beckyAlert";
+*/
 
 function Home({Becky}){
 
@@ -22,7 +22,7 @@ function Home({Becky}){
 
   // ///////////////////
   // const [show, setShow] = useState(true)
-  const [open, setOpen] = useState(true)
+  // const [open, setOpen] = useState(true)
   // // const handleClose = () => setOpen(false);
   // // const handleShow = () => setShow(false);
 
@@ -34,10 +34,15 @@ function Home({Becky}){
         <div 
         className = "homePage border border-dark border-3 mx-1 my-2 bg-secondary-subtle" 
         style={{
-          // border:"solid black 4px", 
-          // margin: "5px", 
-          // background: "brown"
-          }}>    
+
+          }}>   
+
+          {
+            Becky ?
+            <BeckyAlert/>
+            : 
+            <NotBeckyAlert/>
+          } 
           {/* ///////////////////////////////////////////       */}
           {/* {
                 Becky ?
@@ -92,29 +97,6 @@ function Home({Becky}){
                </Modal> 
               } */}
 
-             {/* //     
-            // dont need this
-            // <Toast 
-            // className="border border-dark border-3"
-            // style={{
-
-            // }}
-            // bg="success"
-            // // onClose={() => setOpen(false)}
-            // show={open} 
-            // // delay={5000} 
-            // autohide
-            // >
-            // <Toast.Body
-            // className=""
-            // style={{
-
-            // }}
-            // >
-            //   Hi Someone Else
-            //   </Toast.Body> */}
-            {/* // </Toast> */}
-
 {/* //////////////////////////////////// */}
             
             <Container
@@ -126,18 +108,28 @@ function Home({Becky}){
             
             >
             <p>Home Page</p>
-            {/* <BeckyAlert/> */}
-            {/* <Nav/> */}
-           
-            {/* <br/> */}
-            {/* <div>
+      {/* 
+      <div>
        <nav>
-          <button><Link to = "/" >Home</Link></button>
+          <button>
+            <Link 
+              to = "/" 
+            >
+              Home
+            </Link>
+          </button>
           
-          <button><Link to = "/food" >Food</Link></button>
+          <button>
+            <Link 
+              to = "/food" 
+            >
+              Food
+              </Link>
+            </button>
        
         </nav>
-      </div> */}
+      </div> 
+      */}
       </Container>
         </div>
     )

@@ -6,13 +6,14 @@
 }
 
 /* 
-
+THINK CAN DELETE THIS
 tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 tr:hover {
   background-color: #ffff99;
-} */
+} 
+*/
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

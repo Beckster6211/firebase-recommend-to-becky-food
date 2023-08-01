@@ -6,14 +6,18 @@ import Header from "./components/Header/header";
 import Navigation from "./components/Nav/nav";
 import Footer from "./components/Footer/footer";
 
-
+/* THINK I CAN DELETE
+/////////////////////////////////////////
 import Toast from 'react-bootstrap/Toast';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-
+/////////////////////////////////////////
+*/
 import React, {useState} from "react"
 import {getAuth, onAuthStateChanged} from "firebase/auth"
 import {Route, Routes, Link} from "react-router-dom"
+/* COULD DELETE LINK IMPORTED */
+
 
 function App() {
 const [isBecky, setIsBecky] = useState(false)
@@ -33,6 +37,8 @@ onAuthStateChanged(auth, (user)=>{
         }
     })
 
+    /* THINK I CAN DELETE
+    /////////////////////////////////////////
     // const [show, setShow] = useState(true)
     // const [open, setOpen] = useState(true)
     // const handleClose = () => setOpen(false);
@@ -40,7 +46,8 @@ onAuthStateChanged(auth, (user)=>{
 
     // console.log({show})
     // console.log({open})
-
+    /////////////////////////////////////////
+    */
 
   return (
   <div 
@@ -64,9 +71,21 @@ onAuthStateChanged(auth, (user)=>{
 
       {/* <Home/> */}
     <Routes>
-      <Route path = "/" element = {<Home Becky = {isBecky}/>} />
-      <Route path = "/food" element ={<Food Becky = {isBecky}/>} />
-      <Route path = "/login" element = {<Login/>} />
+      <Route 
+      path = "/" 
+      element = {
+        <Home Becky = {isBecky}/>
+                } />
+      <Route 
+      path = "/food" 
+      element ={
+        <Food Becky = {isBecky}/>
+                } />
+      <Route 
+      path = "/login" 
+      element = {
+        <Login/>
+                } />
       {/* <Login/> */}
       {/* food will act as home page for now
       <Food Becky = {isBecky}/> */}
@@ -81,7 +100,10 @@ onAuthStateChanged(auth, (user)=>{
 
 export default App;
 
-
+/*
+///////////////////////////////
+THINK I CAN DELETE
+*/
 // import React, {useState} from "react"
 // import {authentication} from "../../firebase"
 // import {createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut} from "firebase/auth"

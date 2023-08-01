@@ -8,11 +8,13 @@ function Navigation(){
         <div 
         className=""
         >
-            {/* <nav>
+            {/* 
+            <nav>
                 <button><Link to = "/" >Home</Link></button>
                 <button><Link to = "/food" >Food</Link></button>
                 
-            </nav> */}
+            </nav> 
+            */}
             <Nav 
             className="border border-dark border-3 rounded bg-light m-1 "
             style={{

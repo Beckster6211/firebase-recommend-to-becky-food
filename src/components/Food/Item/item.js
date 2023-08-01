@@ -167,7 +167,7 @@ function Item({
             }}
             type="checkbox"
             onChange = {()=>{
-              // console.log("Not for you")
+              console.log("Not for you, sorry")
                }}       
             checked={foodTried}
             readOnly
@@ -229,7 +229,7 @@ function Item({
           //   changeOpinion(food, event);
           // }}
           onChange = {()=>{
-            console.log("not for you")
+            console.log("Not for you, Sorry")
           }}
           readOnly
         >
@@ -246,7 +246,7 @@ function Item({
           //   changeOpinion(food, event);
           // }}
           onChange = {()=>{
-            console.log("not for you")
+            console.log("Not for you, Sorry")
           }}
           readOnly
         >
@@ -263,7 +263,7 @@ function Item({
           //   changeOpinion(food, event);
           // }}
           onChange = {()=>{
-            console.log("not for you")
+            console.log("Not for you, Sorry")
           }}
           readOnly
         >
