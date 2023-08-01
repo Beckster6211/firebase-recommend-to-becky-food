@@ -1,14 +1,17 @@
 import React, {useState} from "react"
+
+//
 import {authentication} from "../../firebase"
 import {createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut} from "firebase/auth"
 import {Link} from "react-router-dom"
 
+//
 import Container from "react-bootstrap/Container"
 import Form from "react-bootstrap/Form"
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Button from 'react-bootstrap/Button';
 
-
+//
 function LoginForm(){
     const [becky, setBecky] = useState(false)
     const [signIn, setSignIn] = useState(false)
@@ -79,17 +82,6 @@ return (
         // border: "solid black 2px"
     }}
     >
-        {/* <Container 
-        fluid
-        className=""
-        style={{
-            height:"13vh",
-            backgroundColor: "beige",
-            // border: "solid "
-        }}
-        >
-
-        </Container> */}
         <br/>
         <br/>
         <br/>
@@ -117,18 +109,6 @@ return (
             Sign Out
             </Link>
             </Button>
-        {/* <button 
-        className=""
-        style={{
-
-        }}
-        onClick={signOutUser}
-        >
-            <Link 
-            to = "/" >
-            Sign Out
-            </Link>
-        </button> */}
         <br/>
         <br/>
             <Form 
@@ -159,7 +139,7 @@ return (
                         </Form.Control>
                     </FloatingLabel>
                 </Form.Group>
-                <br/>
+        <br/>
                 <Form.Group>
                     <FloatingLabel
                     controlId="LoginPassword"
@@ -181,7 +161,7 @@ return (
                 
 
             </Form>
-            <br/>
+        <br/>
             <Button 
             variant="primary"
             className="bg-primary-subtle"
@@ -197,139 +177,16 @@ return (
             Sign In
             </Link>
             </Button>
-        {/* <button>login</button> */}
-        {/* <br/> */}
-        {/* <button onClick={createUser}>Create User</button> */}
-        {/* <br/>
-        <br/> */}
-        {/* 
-        ///////////////////
-        <button 
-        className=""
-        style={{
-
-        }}
-        onClick={signOutUser}>
-            <Link 
-            to = "/" >
-            Sign Out
-            </Link>
-        </button>
+        
         <br/>
-        <br/> 
-        ///////////////////
-        */}
-        {/* 
-        ////////////////////
-        <input 
-        className=""
-        style={{
-
-        }}
-        type = "email" 
-        placeholder = {"Email..."} 
-        autoComplete="off" 
-        onChange = {(event)=>{getEmail(event)}}
-        /> 
-        ////////////////////
-        */}
-        {/* 
-        ///////////////////
+        <br/>      
         <br/>
         <br/>
-        <input 
-        className=""
-        style={{
-
-        }}
-        type="password" 
-        placeholder ="Password" 
-        autoComplete="off" 
-        onChange = {(event) => {getPassword(event)}}
-        /> 
-        /////////////////
-        */}
-
-        {/* <button onClick={createUser}>Create User</button> */}
-        <br/>
-        <br/>
-
-        {/* {signIn === true ? 
-        <button onClick={signOutUser}>Sign Out</button>
-        : 
-        <button onClick={signInUser}>Sign In</button>
-        } */} 
-
-<br/>
-        {/* 
-        //////////////
-        <button 
-        className=""
-        style={{
-
-        }}
-        onClick={signInUser}> 
-            <Link 
-            to = "/">
-            Sign In
-            </Link>
-        </button> 
-        ///////////////////
-        */}
-        <br/>
-        {/* /
-        <br/>
-        <button onClick={signOutUser}><Link to = "/" >Sign Out</Link></button> */}
-        {/* {becky === true ? 
-        <p>"Hi Becky"</p>
-        : <p>"Hello someone else"</p>
-    } */}
         </Container>
         <br/>
         <br/>
         <br/>
         <br/>
-        {/* <Container 
-        fluid
-        className=""
-        style={{
-            height:"13vh",
-            backgroundColor: "beige",
-            // border: "solid "
-        }}
-        >
-
-        </Container> */}
-        {/* ////////////////////////// */}
-        {/* <button>login</button> */}
-        {/* <br/>
-        <button onClick={createUser}>Create User</button>
-        <br/>
-        <br/>
-        <input type = "email" placeholder = {"Email..."} autoComplete="off" onChange = {(event)=>{getEmail(event)}}/>
-        <br/>
-        <br/> */}
-        {/* <input type="password" placeholder ="Password" autoComplete="off" onChange = {(event) => {getPassword(event)}}/> */}
-       
-        {/* <button onClick={createUser}>Create User</button> */}
-        {/* <br/>
-        <br/> */}
-        {/* {signIn === true ? 
-        <button onClick={signOutUser}>Sign Out</button>
-        : 
-        <button onClick={signInUser}>Sign In</button>
-        } */} 
-        {/* <br/>
-        <button onClick={signInUser}> <Link to = "/" >Sign In</Link></button>
-        <br/> */}
-{/*        
-        /
-        <br/>
-        <button onClick={signOutUser}><Link to = "/" >Sign Out</Link></button> */}
-        {/* {becky === true ? 
-        <p>"Hi Becky"</p>
-        : <p>"Hello someone else"</p>
-    } */}
     </div>
 )
 }
