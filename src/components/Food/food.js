@@ -90,7 +90,6 @@ function Food({Becky}) {
 
 
   ///becky opinion
-
   const changeOpinion = async (food, event) => {
     // console.log("button clicked");
     // console.log(`change opinion ${food.beckyopinion} `);
@@ -126,13 +125,7 @@ function Food({Becky}) {
         >
             🥄🥣☕ &nbsp;&nbsp;FOOD PAGE&nbsp;&nbsp;🧂🥤🍽️
       </Container>
-      {/* <div>
-        <br/> */}
-        {/* <Nav/> */}
-        {/* <h3>Recommend to Becky</h3> */}
-        {/* <h4 className = "header">FOOD PAGE</h4>
-        
-      </div> */}
+      
       <FoodLike/>
       <FoodHelper/>
       <FoodDislike/>
@@ -158,7 +151,6 @@ function Food({Becky}) {
             }}
             >
               Food Form
-              {/* <h3 >Form for Food</h3> */}
               </Container>
            </Accordion.Header>
           <Accordion.Body 
@@ -190,7 +182,6 @@ function Food({Becky}) {
             >
               Food Table
             </Container>
-           {/* <h3>Food Table</h3>  */}
             </Accordion.Header>
           <Accordion.Body 
           className="px-2 py-3"
