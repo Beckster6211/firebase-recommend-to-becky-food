@@ -1,4 +1,12 @@
+import React, {useState} from "react"
 import "./App.css";
+
+//
+import {getAuth, onAuthStateChanged} from "firebase/auth"
+import {Route, Routes, Link} from "react-router-dom"
+/* COULD DELETE LINK IMPORTED */
+
+//
 import Login from "./components/Login/loginButton";
 import Food from "./components/Food/food";
 import Home from "./components/Home/home";
@@ -6,19 +14,7 @@ import Header from "./components/Header/header";
 import Navigation from "./components/Nav/nav";
 import Footer from "./components/Footer/footer";
 
-/* THINK I CAN DELETE
-/////////////////////////////////////////
-import Toast from 'react-bootstrap/Toast';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-/////////////////////////////////////////
-*/
-import React, {useState} from "react"
-import {getAuth, onAuthStateChanged} from "firebase/auth"
-import {Route, Routes, Link} from "react-router-dom"
-/* COULD DELETE LINK IMPORTED */
-
-
+// 
 function App() {
 const [isBecky, setIsBecky] = useState(false)
 console.log({isBecky})
@@ -37,39 +33,12 @@ onAuthStateChanged(auth, (user)=>{
         }
     })
 
-    /* THINK I CAN DELETE
-    /////////////////////////////////////////
-    // const [show, setShow] = useState(true)
-    // const [open, setOpen] = useState(true)
-    // const handleClose = () => setOpen(false);
-    // const handleShow = () => setShow(false);
-
-    // console.log({show})
-    // console.log({open})
-    /////////////////////////////////////////
-    */
-
   return (
   <div 
   className="App"
   >
     <Header/>
     <Navigation/>
-    {/* <header>
-      <h3>Recommend to Becky</h3>
-      <button><Link to = "/login" >Login</Link></button>
-    </header> */}
-    {/* <br/> */}
-      {/* <div>
-       <nav>
-          <button><Link to = "/" >Home</Link></button>
-          
-          <button><Link to = "/food" >Food</Link></button>
-       
-        </nav>
-      </div> */}
-
-      {/* <Home/> */}
     <Routes>
       <Route 
       path = "/" 
@@ -86,10 +55,6 @@ onAuthStateChanged(auth, (user)=>{
       element = {
         <Login/>
                 } />
-      {/* <Login/> */}
-      {/* food will act as home page for now
-      <Food Becky = {isBecky}/> */}
-      {/* <Food /> */}
       
     </Routes>
     <Navigation/>

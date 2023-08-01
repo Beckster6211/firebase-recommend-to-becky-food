@@ -1,6 +1,10 @@
 import React from "react"
-import {Link} from "react-router-dom"
 
+//
+import {Link} from "react-router-dom"
+/* COULD DELETE LINK IMPORTED */
+
+//
 import Nav from 'react-bootstrap/Nav';
 
 function Navigation(){
@@ -8,13 +12,6 @@ function Navigation(){
         <div 
         className=""
         >
-            {/* 
-            <nav>
-                <button><Link to = "/" >Home</Link></button>
-                <button><Link to = "/food" >Food</Link></button>
-                
-            </nav> 
-            */}
             <Nav 
             className="border border-dark border-3 rounded bg-light m-1 "
             style={{
@@ -24,27 +21,6 @@ function Navigation(){
             variant="tabs" 
             defaultActiveKey={"/home"}
             >
-                {/* ////////////// 
-                Maybe take away home button or link home to header
-                */}
-                {/* <Nav.Item
-                className="border-end border-dark border-2 "
-                style={{
-                    background: "brown"
-                }}
-                >
-                    <Nav.Link 
-                    href = "/"
-                    className="text-dark p-0"
-                    style={{
-                        fontSize:"2.5vw"
-                    }}
-                    >
-                        Home</Nav.Link>
-                </Nav.Item> */}
-                {/* ////////////// 
-                Maybe take away home button or link home to header
-                */}
                 <Nav.Item
                 className="border-end border-dark border-2 bg-warning"
                 >
