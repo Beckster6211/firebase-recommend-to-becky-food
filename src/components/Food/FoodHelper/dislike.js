@@ -14,14 +14,14 @@ function FoodDislike(){
             style={{
 
             }}
-            variant="primary" 
+            variant="danger" 
             onClick={()=> setRightShow(true)}
             >
               Food Dislike ☞
           </Button>
 
           <Offcanvas 
-          className=""
+          className="bg-danger-subtle"
           style={{
 
           }}
@@ -30,15 +30,23 @@ function FoodDislike(){
           placement="end"
           >
             <Offcanvas.Header 
+              className="bg-danger"
             closeButton
             >
               <Offcanvas.Title>
-                Offcanvas
+              🤮 I Dislike... 🤮
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
+            bullet point list of what I dislike
+              <br/>
+              .
+              .
+              .
+              .
+              <br/>
+              yuck
+              {/* maybe do a video of explaining what I dislike */}
             </Offcanvas.Body>
           </Offcanvas>
         </div>

@@ -5,7 +5,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 
 function FoodLike(){
 
-    const [show, setShow] = useState(false);
+    const [leftShow, setLeftShow] = useState(false);
 
     return(
         <div>
@@ -14,8 +14,8 @@ function FoodLike(){
             style={{
 
             }}
-            variant="primary" 
-            onClick={()=>setShow(true)}
+            variant="success" 
+            onClick={()=>setLeftShow(true)}
           >
             Like ☜
           </Button>
@@ -25,8 +25,8 @@ function FoodLike(){
             style={{
               
             }}
-            show={show} 
-            onHide={()=>setShow(false)} 
+            show={leftShow} 
+            onHide={()=>setLeftShow(false)} 
             placement="start"
           >
             <Offcanvas.Header
@@ -48,6 +48,7 @@ function FoodLike(){
               .
               <br/>
               yummy
+              {/* maybe do a video of explaining what I like */}
             </Offcanvas.Body>
           </Offcanvas>
         </div>

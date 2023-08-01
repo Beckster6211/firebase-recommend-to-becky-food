@@ -14,14 +14,14 @@ function FoodHelper(){
             style={{
 
             }}
-            variant="primary" 
+            variant="secondary" 
             onClick={()=>setTopShow(true)}
           >
             Food Helper ☝️ 
           </Button>
 
           <Offcanvas 
-            className=""
+            className="bg-secondary-subtle"
             style={{
               
             }}
@@ -30,15 +30,16 @@ function FoodHelper(){
             placement="top"
           >
             <Offcanvas.Header 
+                className="bg-secondary"
               closeButton
             >
               <Offcanvas.Title>
-                Offcanvas
+              ℹ️ Helper ℹ️
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-              Some text as placeholder. In real life you can have the elements you
-              have chosen. Like, text, images, lists, etc.
+              Some helper text for the whole page
+              {/* video of explaining how to do the page */}
             </Offcanvas.Body>
           </Offcanvas>
         </div>
