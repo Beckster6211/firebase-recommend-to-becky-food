@@ -1,19 +1,25 @@
 import React, {useState} from "react"
-import {getAuth, onAuthStateChanged} from "firebase/auth"
-
-import Card from "react-bootstrap/Card"
-import Container from "react-bootstrap/Container"
-import Button from "react-bootstrap/Button"
-import ButtonGroup from "react-bootstrap/ButtonGroup"
-import Stack from 'react-bootstrap/Stack'
-import InputGroup from 'react-bootstrap/InputGroup';
-import Form from "react-bootstrap/Form"
-import Badge from "react-bootstrap/Badge"
-
-import Toast from 'react-bootstrap/Toast';
-
+/* COULD DELETE USESTATE */
 import "./item.css";
 
+//
+import {getAuth, onAuthStateChanged} from "firebase/auth"
+/* COULD DELETE THIS */
+
+//
+import Button from "react-bootstrap/Button"
+import Stack from 'react-bootstrap/Stack'
+import Form from "react-bootstrap/Form"
+
+// import Card from "react-bootstrap/Card"
+// import Container from "react-bootstrap/Container"
+// import ButtonGroup from "react-bootstrap/ButtonGroup"
+// import InputGroup from 'react-bootstrap/InputGroup';
+// import Badge from "react-bootstrap/Badge"
+// import Toast from 'react-bootstrap/Toast';
+
+
+//
 function Item({
   food,
   foodItem,
