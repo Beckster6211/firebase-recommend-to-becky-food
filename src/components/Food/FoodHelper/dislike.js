@@ -12,7 +12,7 @@ function FoodDislike(){
           <Button 
             className=""
             style={{
-
+              fontSize:"1.5vw"
             }}
             variant="danger" 
             onClick={()=> setRightShow(true)}

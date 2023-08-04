@@ -12,7 +12,7 @@ function FoodHelper(){
             <Button 
             className=""
             style={{
-
+              fontSize:"1.5vw"
             }}
             variant="secondary" 
             onClick={()=>setTopShow(true)}

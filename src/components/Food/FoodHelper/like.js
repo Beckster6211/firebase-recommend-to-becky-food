@@ -12,12 +12,12 @@ function FoodLike(){
           <Button 
             className=""
             style={{
-
+              fontSize:"1.5vw"
             }}
             variant="success" 
             onClick={()=>setLeftShow(true)}
           >
-            Like ☜
+            ☜ Like
           </Button>
 
           <Offcanvas 

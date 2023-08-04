@@ -125,10 +125,18 @@ function Food({Becky}) {
         >
             🥄🥣☕ &nbsp;&nbsp;FOOD PAGE&nbsp;&nbsp;🧂🥤🍽️
       </Container>
+      <br/>
+      <Container 
+      // fluid
+      className="d-flex justify-content-evenly"
+      >
+        
+          <FoodLike/>
+          <FoodHelper/>
+          <FoodDislike/>
+        
+      </Container>
       
-      <FoodLike/>
-      <FoodHelper/>
-      <FoodDislike/>
       <br/>
       <Accordion 
       defaultActiveKey={["0"]} 
