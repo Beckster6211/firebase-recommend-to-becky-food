@@ -11,13 +11,6 @@ import Button from "react-bootstrap/Button"
 import Stack from 'react-bootstrap/Stack'
 import Form from "react-bootstrap/Form"
 
-// import Card from "react-bootstrap/Card"
-// import Container from "react-bootstrap/Container"
-// import ButtonGroup from "react-bootstrap/ButtonGroup"
-// import InputGroup from 'react-bootstrap/InputGroup';
-// import Badge from "react-bootstrap/Badge"
-// import Toast from 'react-bootstrap/Toast';
-
 
 //
 function Item({
@@ -62,19 +55,15 @@ function Item({
       style={{
       }}
       >
-          {/* <Container fluid 
-          className="bg-light rounded p-1"
-          style={{
-           
-          }}
-          > */}
             <p 
             className="bg-light border border-dark border-2 rounded p-1"
             style={{
               fontSize:"1.6vw",
               // border:"solid black 2px"
             }}
-            >{foodItem}</p>
+            >
+              {foodItem}
+            </p>
             <Form.Control 
             name="foodTableFoodTextarea"
             className="border border-dark border-2 p-1"
@@ -86,36 +75,8 @@ function Item({
               height:"10vw"          
             }}
             />
-            {/* 
-            ////////////
-            <textarea
-            defaultValue={foodRecipe}
-            // rows="3"
-            // cols="6"
-            // max-width="95%"
-            readOnly
-            ></textarea> 
-            ////////////
-            */}
-          {/* </Container> */}
       </td>
-        {/*
-        /////////////////////////////
-         <td>
-          <p>{foodItem}</p>
-        <textarea
-          defaultValue={foodRecipe}
-          // rows="3"
-          // cols="6"
-          // max-width="95%"
-          readOnly
-        ></textarea>
-        </td> 
-        /////////////////////////////////////
-        */}
-        {/* <td>
-        <p>{foodRecipe}</p>
-        </td> */}
+
       {/* {
         isBecky === false ?
         <td>
@@ -151,14 +112,7 @@ function Item({
         className="p-2 align-middle"
       style={{
       }}
-        >
-          {/* <Container fluid 
-          className="bg-light rounded p-2"
-          style={{
-            
-          }}
-          > */}
-          
+        >          
         <Stack 
         direction="horizontal"
         className="justify-content-evenly"
@@ -188,29 +142,6 @@ function Item({
         }}
         >{foodOpinion}</p>
         </Stack>
-            {/* <input
-            className="foodCheckbox"
-            style={{
-              width:"3vw",
-              height:"3vw",
-              
-            }}
-            type="checkbox"
-            onChange = {()=>{
-            console.log("not for you")
-            }}
-            checked={foodTried}
-            readOnly
-        /> 
-<p
-        className="p-1 mx-1 mb-0 border border-dark border-2 rounded bg-light w-25"
-        style={{
-          fontSize:"2.5vw",
-          
-          // border:"solid black 2px",
-          // borderRadius:"4px"
-        }}
-        >{foodOpinion}</p> */}
             <Stack 
             gap={1} 
             className="p-1"
@@ -218,12 +149,6 @@ function Item({
               // border:"solid black 3px"
             }}
             >
-            {/* <ButtonGroup vertical
-            className=""
-            style={{
-              border:"solid 2px black"
-            }}
-            > */}
               <Button 
               variant="success"
               className="border border-2 border-dark rounded"
@@ -275,116 +200,8 @@ function Item({
         >
           🤮
         </Button>
-           {/* 
-           //////////
-           <button
-          name="😋"
-          // onClick={(event) => {
-          //   changeOpinion(food, event);
-          // }}
-          onChange = {()=>{
-            console.log("not for you")
-          }}
-          readOnly
-        >
-          Yes/😋
-        </button> 
-        
-        <button
-          name="🤫"
-          // onClick={(event) => {
-          //   changeOpinion(food, event);
-          // }}
-          onChange = {()=>{
-            console.log("not for you")
-          }}
-          readOnly
-        >
-          Alright/🤫
-        </button>
-        
-        <button
-          name="🤮"
-          // onClick={(event) => {
-          //   changeOpinion(food, event);
-          // }}
-          onChange = {()=>{
-            console.log("not for you")
-          }}
-          readOnly
-        >
-          No/🤮
-        </button>
-        /////////
-        */}
-        {/* </ButtonGroup> */}
         </Stack>
-        {/* <p
-        className="p-1 mx-1 mb-0 border border-dark border-2 rounded bg-light w-50"
-        style={{
-          fontSize:"2.5vw",
-          
-          // border:"solid black 2px",
-          // borderRadius:"4px"
-        }}
-        >{foodOpinion}</p> */}
-          {/* </Container> */}
-          {/* 
-          //////////
-          <input
-          type="checkbox"
-          // onChange={() => {
-          //   triedIt(food);
-          // }}
-          onChange = {()=>{
-            console.log("not for you")
-          }}
-          checked={foodTried}
-          readOnly
-         className="foodCheckbox"
-         style={{}}
-        />  
-        
-        <br/>
-           <button
-          name="😋"
-          // onClick={(event) => {
-          //   changeOpinion(food, event);
-          // }}
-          onChange = {()=>{
-            console.log("not for you")
-          }}
-          readOnly
-        >
-          Yes
-        </button>
-        
-        <button
-          name="🤫"
-          // onClick={(event) => {
-          //   changeOpinion(food, event);
-          // }}
-          onChange = {()=>{
-            console.log("not for you")
-          }}
-          readOnly
-        >
-          Alright
-        </button>
-        <button
-          name="🤮"
-          // onClick={(event) => {
-          //   changeOpinion(food, event);
-          // }}
-          onChange = {()=>{
-            console.log("not for you")
-          }}
-          readOnly
-        >
-          No
-        </button>
-        ///////////
-        */}
+         
         {/* 
         /////////
         <button
@@ -401,11 +218,6 @@ function Item({
         </button>
         /////////
          */}
-        {/* 
-        //////////
-        <p>{foodOpinion}</p> 
-        /////////
-        */}
       </td>
       
         :
@@ -500,30 +312,6 @@ function Item({
           🤮
         </Button>
             </Stack>
-        {/* <button
-          name="😋"
-          onClick={(event) => {
-            changeOpinion(food, event);
-          }}
-        >
-          Yes
-        </button> 
-        <button
-          name="🤫"
-          onClick={(event) => {
-            changeOpinion(food, event);
-          }}
-        >
-          Alright
-        </button>
-        <button
-          name="🤮"
-          onClick={(event) => {
-            changeOpinion(food, event);
-          }}
-        >
-          No
-        </button>*/}
         {/* comment this one out once done */}
         {/* <button
           name="🤷‍♀️"
@@ -533,63 +321,8 @@ function Item({
         >
           Reset
         </button> */}
-        {/* <p
-        className="p-1 mx-1 mb-0 border border-dark border-2 rounded bg-light"
-        style={{
-          fontSize:"2.5vw",
-          // border:"solid black 2px",
-          // borderRadius:"4px"
-        }}
-        >{foodOpinion}</p> */}
       </td>
       }
-      {/*
-      <td>
-        <input
-          type="checkbox"
-          onChange={() => {
-            triedIt(food);
-          }}
-          checked={foodTried}
-          // readOnly
-        />
-        <br />
-        <button
-          name="😋"
-          onClick={(event) => {
-            changeOpinion(food, event);
-          }}
-        >
-          Yes
-        </button>
-        <button
-          name="🤫"
-          onClick={(event) => {
-            changeOpinion(food, event);
-          }}
-        >
-          Alright
-        </button>
-        <button
-          name="🤮"
-          onClick={(event) => {
-            changeOpinion(food, event);
-          }}
-        >
-          No
-        </button>
-        {/* comment this one out once done 
-        <button
-          name="🤷‍♀️"
-          onClick={(event) => {
-            changeOpinion(food, event);
-          }}
-        >
-          Reset
-        </button>
-        <p>{foodOpinion}</p>
-      </td>
-        */}
       {/* <td>
         <p>{foodTried}</p>
       </td> */}
@@ -598,19 +331,14 @@ function Item({
       style={{
       }}
       >
-        {/* <Container fluid 
-          className="bg-light rounded p-1"
-          style={{
-            
-          }}
-          > */}
         <p
         className="p-1 bg-light border border-dark border-2 rounded"
         style={{
           fontSize:"1.6vw"
         }}
-        >{foodRecommend}</p>
-        {/* </Container> */}
+        >
+          {foodRecommend}
+        </p>
       </td>
 
 
@@ -619,12 +347,6 @@ function Item({
       style={{
       }}
       >
-        {/* <Container fluid 
-          className="bg-light rounded p-1"
-          style={{
-            
-          }}
-          > */}
           <Button 
           variant="light"
           className="border border-dark border-2"
@@ -637,19 +359,6 @@ function Item({
           }}>
           🗑️
           </Button>
-        {/* 
-        /////////
-        <button
-          onClick={() => {
-            // console.log("delete button clicked");
-            removeFood(foodId);
-          }}
-        >
-          🗑️
-        </button> 
-        /////////
-        */}
-        {/* </Container> */}
       </td>
     </tr>
   );
